@@ -9,8 +9,11 @@ This is the main file for the project...
 #include <string.h>
 #include <stdlib.h>
 
-int main( int argc, char * argv [] ) {
+#include "Setup/hardware.h"
 
+//int main( int argc, char * argv [] ) {
+int main(void)
+{
 
 
 
@@ -33,6 +36,7 @@ Arguemnts:
 
 */ 
 
+/*
 	if(strcmp("--help",argv[1]) == 0)
 	{
 		printf("Help:\n\r");
@@ -61,17 +65,19 @@ Arguemnts:
 		goto done;
 	}
 
-/*	
-	if(strcmp("-D",argv[5]) == 0)
-	{
-		printf("Starting program as a daemon\n\r");
-		goto done;
-	}
+	done:
 */
- done:
+
+	//Setup hardware...
+
+	if(InitHardware())
+		printf("Hardware init failed!\n\r");
+	else
+		printf("Hardware init ok!\n\r");
 
 
-
+	
+	
 
 	
 

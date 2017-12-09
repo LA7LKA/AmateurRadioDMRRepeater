@@ -5,6 +5,8 @@ This is an attempt at making a 70cm DMR repeater which supports VoCoders AMBE+2 
 The first version is an experiment model with Silicon lab Si4463 for RX and TX.
 The modules with Si4463 is connected to a Raspberry Pi 3.
 
+<bold>Progress</bold></p>
+
 9. December 2017: </strong> </p>
 Started writing some more code just for using one module to test the code a bit.</p>
 Did hookup one module to Raspberry Pi 3:</p>

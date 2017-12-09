@@ -8,8 +8,8 @@ The modules with Si4463 is connected to a Raspberry Pi 3.
 
 9. December 2017:
 Started writing some more code just for using one module to test the code a bit.
-Did hook up one module to Raspberry Pi 3:
-
+Did hookup one module to Raspberry Pi 3:
+![Alt text](IMG_20171209_135748.jpg?raw=true "module hookup")
 
 
 

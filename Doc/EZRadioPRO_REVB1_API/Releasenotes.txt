@@ -1,0 +1,20 @@
+API documentation changes:
+v.2.0.4
+-	ALL 					Missing pictures of formulas are put back
+-	ALL					FUNC_INFO: PATCH reply field is shown
+-	EZRadio_REVC2, EZRadioPRO_REVC2		START_TX: TXCOMPLETE_STATE - TX State added
+-	EZRadio_REVC2, EZRadioPRO_REVC2		GLOBAL_WUT_CONFIG : WUT_EN field description extended
+-	EZRadio_REVC2, EZRadioPRO_REVC2		PTI_LOG_EN description improved
+-	EZRadioPRO_REVC2			3 of 6 encoding/decoding (bit EN_3_OF_6 of property PKT_CONFIG2) is added to Si4060-C2, Si4063-C2 and Si4362-C2
+-	EZRadioPRO_REVC2			MODEM_DSA_CTRL2:SYNC_QUAL bit is put back
+-	EZRadioPRO_REVC2			Argument and reply fields are added to the IRCAL_MANUAL command description
+-	EZRadioPRO_REVC2			Default value of MODEM_IFPKD_THRESHOLDS corrected
+
+v.2.0.5
+-	ALL					File compression added
+
+API documentation known issues
+v.2.0.5
+-	EZRadioPRO_REVC2			TX_HOP command is missing from Si4060C2 and Si4063C2 API documentation
+-	EZRadioPRO_REVB1			IRCAL_MANUAL command is wrongly present in the document, it is not available in the EZRadioPRO_REVB1 chips
+

@@ -20,92 +20,92 @@
 
 /* This section contains command map declarations */
 struct si446x_reply_GENERIC_map {
-        U8  REPLY[16];
+        uint8_t  REPLY[16];
 };
 
 struct si446x_reply_PART_INFO_map {
-        U8  CHIPREV;
+        uint8_t  CHIPREV;
         U16  PART;
-        U8  PBUILD;
+        uint8_t  PBUILD;
         U16  ID;
-        U8  CUSTOMER;
-        U8  ROMID;
+        uint8_t  CUSTOMER;
+        uint8_t  ROMID;
 };
 
 struct si446x_reply_FUNC_INFO_map {
-        U8  REVEXT;
-        U8  REVBRANCH;
-        U8  REVINT;
-        U8  FUNC;
+        uint8_t  REVEXT;
+        uint8_t  REVBRANCH;
+        uint8_t  REVINT;
+        uint8_t  FUNC;
 };
 
 struct si446x_reply_GET_PROPERTY_map {
-        U8  DATA[16];
+        uint8_t  DATA[16];
 };
 
 struct si446x_reply_GPIO_PIN_CFG_map {
-        U8  GPIO[4];
-        U8  NIRQ;
-        U8  SDO;
-        U8  GEN_CONFIG;
+        uint8_t  GPIO[4];
+        uint8_t  NIRQ;
+        uint8_t  SDO;
+        uint8_t  GEN_CONFIG;
 };
 
 struct si446x_reply_FIFO_INFO_map {
-        U8  RX_FIFO_COUNT;
-        U8  TX_FIFO_SPACE;
+        uint8_t  RX_FIFO_COUNT;
+        uint8_t  TX_FIFO_SPACE;
 };
 
 struct si446x_reply_GET_INT_STATUS_map {
-        U8  INT_PEND;
-        U8  INT_STATUS;
-        U8  PH_PEND;
-        U8  PH_STATUS;
-        U8  MODEM_PEND;
-        U8  MODEM_STATUS;
-        U8  CHIP_PEND;
-        U8  CHIP_STATUS;
+        uint8_t  INT_PEND;
+        uint8_t  INT_STATUS;
+        uint8_t  PH_PEND;
+        uint8_t  PH_STATUS;
+        uint8_t  MODEM_PEND;
+        uint8_t  MODEM_STATUS;
+        uint8_t  CHIP_PEND;
+        uint8_t  CHIP_STATUS;
 };
 
 struct si446x_reply_REQUEST_DEVICE_STATE_map {
-        U8  CURR_STATE;
-        U8  CURRENT_CHANNEL;
+        uint8_t  CURR_STATE;
+        uint8_t  CURRENT_CHANNEL;
 };
 
 struct si446x_reply_READ_CMD_BUFF_map {
-        U8  BYTE[16];
+        uint8_t  BYTE[16];
 };
 
 struct si446x_reply_FRR_A_READ_map {
-        U8  FRR_A_VALUE;
-        U8  FRR_B_VALUE;
-        U8  FRR_C_VALUE;
-        U8  FRR_D_VALUE;
+        uint8_t  FRR_A_VALUE;
+        uint8_t  FRR_B_VALUE;
+        uint8_t  FRR_C_VALUE;
+        uint8_t  FRR_D_VALUE;
 };
 
 struct si446x_reply_FRR_B_READ_map {
-        U8  FRR_B_VALUE;
-        U8  FRR_C_VALUE;
-        U8  FRR_D_VALUE;
-        U8  FRR_A_VALUE;
+        uint8_t  FRR_B_VALUE;
+        uint8_t  FRR_C_VALUE;
+        uint8_t  FRR_D_VALUE;
+        uint8_t  FRR_A_VALUE;
 };
 
 struct si446x_reply_FRR_C_READ_map {
-        U8  FRR_C_VALUE;
-        U8  FRR_D_VALUE;
-        U8  FRR_A_VALUE;
-        U8  FRR_B_VALUE;
+        uint8_t  FRR_C_VALUE;
+        uint8_t  FRR_D_VALUE;
+        uint8_t  FRR_A_VALUE;
+        uint8_t  FRR_B_VALUE;
 };
 
 struct si446x_reply_FRR_D_READ_map {
-        U8  FRR_D_VALUE;
-        U8  FRR_A_VALUE;
-        U8  FRR_B_VALUE;
-        U8  FRR_C_VALUE;
+        uint8_t  FRR_D_VALUE;
+        uint8_t  FRR_A_VALUE;
+        uint8_t  FRR_B_VALUE;
+        uint8_t  FRR_C_VALUE;
 };
 
 struct si446x_reply_IRCAL_MANUAL_map {
-        U8  IRCAL_AMP_REPLY;
-        U8  IRCAL_PH_REPLY;
+        uint8_t  IRCAL_AMP_REPLY;
+        uint8_t  IRCAL_PH_REPLY;
 };
 
 struct si446x_reply_PACKET_INFO_map {
@@ -113,17 +113,17 @@ struct si446x_reply_PACKET_INFO_map {
 };
 
 struct si446x_reply_GET_MODEM_STATUS_map {
-        U8  MODEM_PEND;
-        U8  MODEM_STATUS;
-        U8  CURR_RSSI;
-        U8  LATCH_RSSI;
-        U8  ANT1_RSSI;
-        U8  ANT2_RSSI;
+        uint8_t  MODEM_PEND;
+        uint8_t  MODEM_STATUS;
+        uint8_t  CURR_RSSI;
+        uint8_t  LATCH_RSSI;
+        uint8_t  ANT1_RSSI;
+        uint8_t  ANT2_RSSI;
         U16  AFC_FREQ_OFFSET;
 };
 
 struct si446x_reply_READ_RX_FIFO_map {
-        U8  DATA[2];
+        uint8_t  DATA[2];
 };
 
 struct si446x_reply_GET_ADC_READING_map {
@@ -133,21 +133,21 @@ struct si446x_reply_GET_ADC_READING_map {
 };
 
 struct si446x_reply_GET_PH_STATUS_map {
-        U8  PH_PEND;
-        U8  PH_STATUS;
+        uint8_t  PH_PEND;
+        uint8_t  PH_STATUS;
 };
 
 struct si446x_reply_GET_CHIP_STATUS_map {
-        U8  CHIP_PEND;
-        U8  CHIP_STATUS;
-        U8  CMD_ERR_STATUS;
-        U8  CMD_ERR_CMD_ID;
+        uint8_t  CHIP_PEND;
+        uint8_t  CHIP_STATUS;
+        uint8_t  CMD_ERR_STATUS;
+        uint8_t  CMD_ERR_CMD_ID;
 };
 
 
 /* The union that stores the reply written back to the host registers */
 union si446x_cmd_reply_union {
-        U8                                                               RAW[16];
+        uint8_t                                                               RAW[16];
         struct si446x_reply_GENERIC_map                                  GENERIC;
         struct si446x_reply_PART_INFO_map                                PART_INFO;
         struct si446x_reply_FUNC_INFO_map                                FUNC_INFO;
@@ -175,8 +175,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_POWER_UP 0x02
 /* POWER_UP ARGS */
 #define SI446X_CMD_ARG_COUNT_POWER_UP 7
-        /* macros for entire ARG BOOT_OPTIONS access of type U8 */
-        #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_TYPE U8
+        /* macros for entire ARG BOOT_OPTIONS access of type uint8_t */
+        #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_TYPE uint8_t
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_SIZE 8
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_MASK 0xff
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_MSB 7
@@ -204,8 +204,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_FUNC_INDEX 1
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_FUNC_value (((cmd.arg.POWER_UP.BOOT_OPTIONS & 0x3f)))
         #define SI446X_CMD_POWER_UP_ARG_BOOT_OPTIONS_FUNC_ENUM_PRO 1
-        /* macros for entire ARG XTAL_OPTIONS access of type U8 */
-        #define SI446X_CMD_POWER_UP_ARG_XTAL_OPTIONS_TYPE U8
+        /* macros for entire ARG XTAL_OPTIONS access of type uint8_t */
+        #define SI446X_CMD_POWER_UP_ARG_XTAL_OPTIONS_TYPE uint8_t
         #define SI446X_CMD_POWER_UP_ARG_XTAL_OPTIONS_SIZE 8
         #define SI446X_CMD_POWER_UP_ARG_XTAL_OPTIONS_MASK 0xff
         #define SI446X_CMD_POWER_UP_ARG_XTAL_OPTIONS_MSB 7
@@ -256,15 +256,15 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_PART_INFO 1
 /* PART_INFO REPLY */
 #define SI446X_CMD_REPLY_COUNT_PART_INFO 8
-        /* macros for entire REPLY CHIPREV access of type U8 */
-        #define SI446X_CMD_PART_INFO_REP_CHIPREV_TYPE U8
+        /* macros for entire REPLY CHIPREV access of type uint8_t */
+        #define SI446X_CMD_PART_INFO_REP_CHIPREV_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_MSB 7
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_LSB 0
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_INDEX 1
         /* macros for field CHIPREV access */
-        #define SI446X_CMD_PART_INFO_REP_CHIPREV_CHIPREV_TYPE U8
+        #define SI446X_CMD_PART_INFO_REP_CHIPREV_CHIPREV_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_CHIPREV_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_CHIPREV_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_CHIPREV_CHIPREV_MSB 7
@@ -284,15 +284,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_PART_INFO_REP_PART_PART_MSB 15
         #define SI446X_CMD_PART_INFO_REP_PART_PART_LSB 0
         #define SI446X_CMD_PART_INFO_REP_PART_PART_INDEX 2
-        /* macros for entire REPLY PBUILD access of type U8 */
-        #define SI446X_CMD_PART_INFO_REP_PBUILD_TYPE U8
+        /* macros for entire REPLY PBUILD access of type uint8_t */
+        #define SI446X_CMD_PART_INFO_REP_PBUILD_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_PBUILD_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_PBUILD_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_PBUILD_MSB 7
         #define SI446X_CMD_PART_INFO_REP_PBUILD_LSB 0
         #define SI446X_CMD_PART_INFO_REP_PBUILD_INDEX 4
         /* macros for field PBUILD access */
-        #define SI446X_CMD_PART_INFO_REP_PBUILD_PBUILD_TYPE U8
+        #define SI446X_CMD_PART_INFO_REP_PBUILD_PBUILD_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_PBUILD_PBUILD_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_PBUILD_PBUILD_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_PBUILD_PBUILD_MSB 7
@@ -312,29 +312,29 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_PART_INFO_REP_ID_ID_MSB 15
         #define SI446X_CMD_PART_INFO_REP_ID_ID_LSB 0
         #define SI446X_CMD_PART_INFO_REP_ID_ID_INDEX 5
-        /* macros for entire REPLY CUSTOMER access of type U8 */
-        #define SI446X_CMD_PART_INFO_REP_CUSTOMER_TYPE U8
+        /* macros for entire REPLY CUSTOMER access of type uint8_t */
+        #define SI446X_CMD_PART_INFO_REP_CUSTOMER_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_MSB 7
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_LSB 0
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_INDEX 7
         /* macros for field CUSTOMER access */
-        #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_TYPE U8
+        #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_MSB 7
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_LSB 0
         #define SI446X_CMD_PART_INFO_REP_CUSTOMER_CUSTOMER_INDEX 7
-        /* macros for entire REPLY ROMID access of type U8 */
-        #define SI446X_CMD_PART_INFO_REP_ROMID_TYPE U8
+        /* macros for entire REPLY ROMID access of type uint8_t */
+        #define SI446X_CMD_PART_INFO_REP_ROMID_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_ROMID_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_ROMID_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_ROMID_MSB 7
         #define SI446X_CMD_PART_INFO_REP_ROMID_LSB 0
         #define SI446X_CMD_PART_INFO_REP_ROMID_INDEX 8
         /* macros for field ROMID access */
-        #define SI446X_CMD_PART_INFO_REP_ROMID_ROMID_TYPE U8
+        #define SI446X_CMD_PART_INFO_REP_ROMID_ROMID_TYPE uint8_t
         #define SI446X_CMD_PART_INFO_REP_ROMID_ROMID_SIZE 8
         #define SI446X_CMD_PART_INFO_REP_ROMID_ROMID_MASK 0xff
         #define SI446X_CMD_PART_INFO_REP_ROMID_ROMID_MSB 7
@@ -345,15 +345,15 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_FUNC_INFO 1
 /* FUNC_INFO REPLY */
 #define SI446X_CMD_REPLY_COUNT_FUNC_INFO 6
-        /* macros for entire REPLY REVEXT access of type U8 */
-        #define SI446X_CMD_FUNC_INFO_REP_REVEXT_TYPE U8
+        /* macros for entire REPLY REVEXT access of type uint8_t */
+        #define SI446X_CMD_FUNC_INFO_REP_REVEXT_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_MSB 7
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_LSB 0
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_INDEX 1
         /* macros for field REVEXT access */
-        #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_TYPE U8
+        #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_MSB 7
@@ -361,15 +361,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_INDEX 1
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_MIN 0x0
         #define SI446X_CMD_FUNC_INFO_REP_REVEXT_REVEXT_MAX 0xff
-        /* macros for entire REPLY REVBRANCH access of type U8 */
-        #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_TYPE U8
+        /* macros for entire REPLY REVBRANCH access of type uint8_t */
+        #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_MSB 7
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_LSB 0
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_INDEX 2
         /* macros for field REVBRANCH access */
-        #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_TYPE U8
+        #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_MSB 7
@@ -377,15 +377,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_INDEX 2
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_MIN 0x0
         #define SI446X_CMD_FUNC_INFO_REP_REVBRANCH_REVBRANCH_MAX 0xff
-        /* macros for entire REPLY REVINT access of type U8 */
-        #define SI446X_CMD_FUNC_INFO_REP_REVINT_TYPE U8
+        /* macros for entire REPLY REVINT access of type uint8_t */
+        #define SI446X_CMD_FUNC_INFO_REP_REVINT_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_MSB 7
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_LSB 0
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_INDEX 3
         /* macros for field REVINT access */
-        #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_TYPE U8
+        #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_MSB 7
@@ -393,15 +393,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_INDEX 3
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_MIN 0x0
         #define SI446X_CMD_FUNC_INFO_REP_REVINT_REVINT_MAX 0xff
-        /* macros for entire REPLY FUNC access of type U8 */
-        #define SI446X_CMD_FUNC_INFO_REP_FUNC_TYPE U8
+        /* macros for entire REPLY FUNC access of type uint8_t */
+        #define SI446X_CMD_FUNC_INFO_REP_FUNC_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_MSB 7
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_LSB 0
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_INDEX 6
         /* macros for field FUNC access */
-        #define SI446X_CMD_FUNC_INFO_REP_FUNC_FUNC_TYPE U8
+        #define SI446X_CMD_FUNC_INFO_REP_FUNC_FUNC_TYPE uint8_t
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_FUNC_SIZE 8
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_FUNC_MASK 0xff
         #define SI446X_CMD_FUNC_INFO_REP_FUNC_FUNC_MSB 7
@@ -410,8 +410,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_SET_PROPERTY 0x11
 /* SET_PROPERTY ARGS */
 #define SI446X_CMD_ARG_COUNT_SET_PROPERTY 16
-        /* macros for entire ARG GROUP access of type U8 */
-        #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_TYPE U8
+        /* macros for entire ARG GROUP access of type uint8_t */
+        #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_MSB 7
@@ -419,15 +419,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_INDEX 1
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_value (((cmd.arg.SET_PROPERTY.GROUP)))
         /* macros for field GROUP access */
-        #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_TYPE U8
+        #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_MSB 7
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_LSB 0
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_INDEX 1
         #define SI446X_CMD_SET_PROPERTY_ARG_GROUP_GROUP_value (((cmd.arg.SET_PROPERTY.GROUP & 0xff)))
-        /* macros for entire ARG NUM_PROPS access of type U8 */
-        #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_TYPE U8
+        /* macros for entire ARG NUM_PROPS access of type uint8_t */
+        #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_MSB 7
@@ -435,7 +435,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_INDEX 2
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_value (((cmd.arg.SET_PROPERTY.NUM_PROPS)))
         /* macros for field NUM_PROPS access */
-        #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_TYPE U8
+        #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MSB 7
@@ -444,8 +444,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MIN 0x1
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MAX 0xc
         #define SI446X_CMD_SET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_value (((cmd.arg.SET_PROPERTY.NUM_PROPS & 0xff)))
-        /* macros for entire ARG START_PROP access of type U8 */
-        #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_TYPE U8
+        /* macros for entire ARG START_PROP access of type uint8_t */
+        #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_MSB 7
@@ -453,15 +453,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_INDEX 3
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_value (((cmd.arg.SET_PROPERTY.START_PROP)))
         /* macros for field START_PROP access */
-        #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_TYPE U8
+        #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_MSB 7
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_LSB 0
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_INDEX 3
         #define SI446X_CMD_SET_PROPERTY_ARG_START_PROP_START_PROP_value (((cmd.arg.SET_PROPERTY.START_PROP & 0xff)))
-        /* macros for entire ARG DATA access of type U8 */
-        #define SI446X_CMD_SET_PROPERTY_ARG_DATA_TYPE U8
+        /* macros for entire ARG DATA access of type uint8_t */
+        #define SI446X_CMD_SET_PROPERTY_ARG_DATA_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_MSB 7
@@ -470,7 +470,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_ARRAY_LEN 12
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_value(i) (((cmd.arg.SET_PROPERTY.DATA[(i)])))
         /* macros for field DATA access */
-        #define SI446X_CMD_SET_PROPERTY_ARG_DATA_DATA_TYPE U8
+        #define SI446X_CMD_SET_PROPERTY_ARG_DATA_DATA_TYPE uint8_t
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_DATA_SIZE 8
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_DATA_MASK 0xff
         #define SI446X_CMD_SET_PROPERTY_ARG_DATA_DATA_MSB 7
@@ -482,8 +482,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_PROPERTY 0x12
 /* GET_PROPERTY ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_PROPERTY 4
-        /* macros for entire ARG GROUP access of type U8 */
-        #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_TYPE U8
+        /* macros for entire ARG GROUP access of type uint8_t */
+        #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_MSB 7
@@ -491,15 +491,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_INDEX 1
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_value (((cmd.arg.GET_PROPERTY.GROUP)))
         /* macros for field GROUP access */
-        #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_TYPE U8
+        #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_MSB 7
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_LSB 0
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_INDEX 1
         #define SI446X_CMD_GET_PROPERTY_ARG_GROUP_GROUP_value (((cmd.arg.GET_PROPERTY.GROUP & 0xff)))
-        /* macros for entire ARG NUM_PROPS access of type U8 */
-        #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_TYPE U8
+        /* macros for entire ARG NUM_PROPS access of type uint8_t */
+        #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_MSB 7
@@ -507,7 +507,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_INDEX 2
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_value (((cmd.arg.GET_PROPERTY.NUM_PROPS)))
         /* macros for field NUM_PROPS access */
-        #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_TYPE U8
+        #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MSB 7
@@ -516,8 +516,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MIN 0x1
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_MAX 0x10
         #define SI446X_CMD_GET_PROPERTY_ARG_NUM_PROPS_NUM_PROPS_value (((cmd.arg.GET_PROPERTY.NUM_PROPS & 0xff)))
-        /* macros for entire ARG START_PROP access of type U8 */
-        #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_TYPE U8
+        /* macros for entire ARG START_PROP access of type uint8_t */
+        #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_MSB 7
@@ -525,7 +525,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_INDEX 3
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_value (((cmd.arg.GET_PROPERTY.START_PROP)))
         /* macros for field START_PROP access */
-        #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_TYPE U8
+        #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_MSB 7
@@ -534,8 +534,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_ARG_START_PROP_START_PROP_value (((cmd.arg.GET_PROPERTY.START_PROP & 0xff)))
 /* GET_PROPERTY REPLY */
 #define SI446X_CMD_REPLY_COUNT_GET_PROPERTY 16
-        /* macros for entire REPLY DATA access of type U8 */
-        #define SI446X_CMD_GET_PROPERTY_REP_DATA_TYPE U8
+        /* macros for entire REPLY DATA access of type uint8_t */
+        #define SI446X_CMD_GET_PROPERTY_REP_DATA_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_MSB 7
@@ -543,7 +543,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_INDEX 1
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_ARRAY_LEN 16
         /* macros for field DATA access */
-        #define SI446X_CMD_GET_PROPERTY_REP_DATA_DATA_TYPE U8
+        #define SI446X_CMD_GET_PROPERTY_REP_DATA_DATA_TYPE uint8_t
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_DATA_SIZE 8
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_DATA_MASK 0xff
         #define SI446X_CMD_GET_PROPERTY_REP_DATA_DATA_MSB 7
@@ -552,8 +552,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GPIO_PIN_CFG 0x13
 /* GPIO_PIN_CFG ARGS */
 #define SI446X_CMD_ARG_COUNT_GPIO_PIN_CFG 8
-        /* macros for entire ARG GPIO access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_TYPE U8
+        /* macros for entire ARG GPIO access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_MSB 7
@@ -619,8 +619,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_GPIO_MODE_ENUM_CCA_LATCH 37
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_GPIO_MODE_ENUM_HOPPED 38
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GPIO_GPIO_MODE_ENUM_HOP_TABLE_WRAP 39
-        /* macros for entire ARG NIRQ access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_TYPE U8
+        /* macros for entire ARG NIRQ access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_MSB 7
@@ -671,8 +671,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_NIRQ_MODE_ENUM_CCA 27
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_NIRQ_MODE_ENUM_TX_RX_DATA_CLK 31
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_NIRQ_NIRQ_MODE_ENUM_NIRQ 39
-        /* macros for entire ARG SDO access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_TYPE U8
+        /* macros for entire ARG SDO access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_MSB 7
@@ -723,8 +723,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_SDO_MODE_ENUM_INVALID_PREAMBLE 25
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_SDO_MODE_ENUM_SYNC_WORD_DETECT 26
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_SDO_SDO_MODE_ENUM_CCA 27
-        /* macros for entire ARG GEN_CONFIG access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_TYPE U8
+        /* macros for entire ARG GEN_CONFIG access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_MSB 7
@@ -745,8 +745,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_ARG_GEN_CONFIG_DRV_STRENGTH_ENUM_LOW 3
 /* GPIO_PIN_CFG REPLY */
 #define SI446X_CMD_REPLY_COUNT_GPIO_PIN_CFG 7
-        /* macros for entire REPLY GPIO access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_TYPE U8
+        /* macros for entire REPLY GPIO access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_MSB 7
@@ -808,8 +808,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_GPIO_MODE_ENUM_CCA_LATCH 37
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_GPIO_MODE_ENUM_HOPPED 38
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GPIO_GPIO_MODE_ENUM_HOP_TABLE_WRAP 39
-        /* macros for entire REPLY NIRQ access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_TYPE U8
+        /* macros for entire REPLY NIRQ access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_MSB 7
@@ -856,8 +856,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_NIRQ_MODE_ENUM_CCA 27
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_NIRQ_MODE_ENUM_TX_RX_DATA_CLK 31
         #define SI446X_CMD_GPIO_PIN_CFG_REP_NIRQ_NIRQ_MODE_ENUM_NIRQ 39
-        /* macros for entire REPLY SDO access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_TYPE U8
+        /* macros for entire REPLY SDO access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_MSB 7
@@ -904,8 +904,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_SDO_MODE_ENUM_INVALID_PREAMBLE 25
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_SDO_MODE_ENUM_SYNC_WORD_DETECT 26
         #define SI446X_CMD_GPIO_PIN_CFG_REP_SDO_SDO_MODE_ENUM_CCA 27
-        /* macros for entire REPLY GEN_CONFIG access of type U8 */
-        #define SI446X_CMD_GPIO_PIN_CFG_REP_GEN_CONFIG_TYPE U8
+        /* macros for entire REPLY GEN_CONFIG access of type uint8_t */
+        #define SI446X_CMD_GPIO_PIN_CFG_REP_GEN_CONFIG_TYPE uint8_t
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GEN_CONFIG_SIZE 8
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GEN_CONFIG_MASK 0xff
         #define SI446X_CMD_GPIO_PIN_CFG_REP_GEN_CONFIG_MSB 7
@@ -925,8 +925,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_FIFO_INFO 0x15
 /* FIFO_INFO ARGS */
 #define SI446X_CMD_ARG_COUNT_FIFO_INFO 2
-        /* macros for entire ARG FIFO access of type U8 */
-        #define SI446X_CMD_FIFO_INFO_ARG_FIFO_TYPE U8
+        /* macros for entire ARG FIFO access of type uint8_t */
+        #define SI446X_CMD_FIFO_INFO_ARG_FIFO_TYPE uint8_t
         #define SI446X_CMD_FIFO_INFO_ARG_FIFO_SIZE 8
         #define SI446X_CMD_FIFO_INFO_ARG_FIFO_MASK 0xff
         #define SI446X_CMD_FIFO_INFO_ARG_FIFO_MSB 7
@@ -959,29 +959,29 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_FIFO_INFO_ARG_FIFO_TX_ENUM_TRUE 1
 /* FIFO_INFO REPLY */
 #define SI446X_CMD_REPLY_COUNT_FIFO_INFO 2
-        /* macros for entire REPLY RX_FIFO_COUNT access of type U8 */
-        #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_TYPE U8
+        /* macros for entire REPLY RX_FIFO_COUNT access of type uint8_t */
+        #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_TYPE uint8_t
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_SIZE 8
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_MASK 0xff
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_MSB 7
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_LSB 0
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_INDEX 1
         /* macros for field RX_FIFO_COUNT access */
-        #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_TYPE U8
+        #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_TYPE uint8_t
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_SIZE 8
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_MASK 0xff
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_MSB 7
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_LSB 0
         #define SI446X_CMD_FIFO_INFO_REP_RX_FIFO_COUNT_RX_FIFO_COUNT_INDEX 1
-        /* macros for entire REPLY TX_FIFO_SPACE access of type U8 */
-        #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TYPE U8
+        /* macros for entire REPLY TX_FIFO_SPACE access of type uint8_t */
+        #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TYPE uint8_t
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_SIZE 8
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_MASK 0xff
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_MSB 7
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_LSB 0
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_INDEX 2
         /* macros for field TX_FIFO_SPACE access */
-        #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TX_FIFO_SPACE_TYPE U8
+        #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TX_FIFO_SPACE_TYPE uint8_t
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TX_FIFO_SPACE_SIZE 8
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TX_FIFO_SPACE_MASK 0xff
         #define SI446X_CMD_FIFO_INFO_REP_TX_FIFO_SPACE_TX_FIFO_SPACE_MSB 7
@@ -990,8 +990,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_INT_STATUS 0x20
 /* GET_INT_STATUS ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_INT_STATUS 4
-        /* macros for entire ARG PH_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_TYPE U8
+        /* macros for entire ARG PH_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_MSB 7
@@ -1078,8 +1078,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_RX_FIFO_ALMOST_FULL_PEND_CLR_INDEX 1
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_RX_FIFO_ALMOST_FULL_PEND_CLR_is_true (cmd.arg.GET_INT_STATUS.PH_CLR_PEND & 0x1)
         #define SI446X_CMD_GET_INT_STATUS_ARG_PH_CLR_PEND_RX_FIFO_ALMOST_FULL_PEND_CLR_value (((cmd.arg.GET_INT_STATUS.PH_CLR_PEND & 0x1)))
-        /* macros for entire ARG MODEM_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_TYPE U8
+        /* macros for entire ARG MODEM_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_MSB 7
@@ -1166,8 +1166,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_SYNC_DETECT_PEND_CLR_INDEX 2
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_SYNC_DETECT_PEND_CLR_is_true (cmd.arg.GET_INT_STATUS.MODEM_CLR_PEND & 0x1)
         #define SI446X_CMD_GET_INT_STATUS_ARG_MODEM_CLR_PEND_SYNC_DETECT_PEND_CLR_value (((cmd.arg.GET_INT_STATUS.MODEM_CLR_PEND & 0x1)))
-        /* macros for entire ARG CHIP_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_TYPE U8
+        /* macros for entire ARG CHIP_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_MSB 7
@@ -1246,8 +1246,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_ARG_CHIP_CLR_PEND_WUT_PEND_CLR_value (((cmd.arg.GET_INT_STATUS.CHIP_CLR_PEND & 0x1)))
 /* GET_INT_STATUS REPLY */
 #define SI446X_CMD_REPLY_COUNT_GET_INT_STATUS 8
-        /* macros for entire REPLY INT_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_TYPE U8
+        /* macros for entire REPLY INT_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_MSB 7
@@ -1277,8 +1277,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_PH_INT_PEND_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_PH_INT_PEND_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_PEND_PH_INT_PEND_INDEX 1
-        /* macros for entire REPLY INT_STATUS access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_TYPE U8
+        /* macros for entire REPLY INT_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_MSB 7
@@ -1308,8 +1308,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_PH_INT_STATUS_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_PH_INT_STATUS_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_INT_STATUS_PH_INT_STATUS_INDEX 2
-        /* macros for entire REPLY PH_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_TYPE U8
+        /* macros for entire REPLY PH_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_MSB 7
@@ -1379,8 +1379,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_INDEX 3
-        /* macros for entire REPLY PH_STATUS access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_TYPE U8
+        /* macros for entire REPLY PH_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_MSB 7
@@ -1450,8 +1450,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_RX_FIFO_ALMOST_FULL_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_RX_FIFO_ALMOST_FULL_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_RX_FIFO_ALMOST_FULL_INDEX 4
-        /* macros for entire REPLY MODEM_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_TYPE U8
+        /* macros for entire REPLY MODEM_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_MSB 7
@@ -1521,8 +1521,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_INDEX 5
-        /* macros for entire REPLY MODEM_STATUS access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_TYPE U8
+        /* macros for entire REPLY MODEM_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_MSB 7
@@ -1592,8 +1592,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_SYNC_DETECT_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_SYNC_DETECT_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_MODEM_STATUS_SYNC_DETECT_INDEX 6
-        /* macros for entire REPLY CHIP_PEND access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_TYPE U8
+        /* macros for entire REPLY CHIP_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_MSB 7
@@ -1655,8 +1655,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_WUT_PEND_MSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_WUT_PEND_LSB 0
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_PEND_WUT_PEND_INDEX 7
-        /* macros for entire REPLY CHIP_STATUS access of type U8 */
-        #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_STATUS_TYPE U8
+        /* macros for entire REPLY CHIP_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_STATUS_SIZE 8
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_STATUS_MASK 0xff
         #define SI446X_CMD_GET_INT_STATUS_REP_CHIP_STATUS_MSB 7
@@ -1723,8 +1723,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_REQUEST_DEVICE_STATE 1
 /* REQUEST_DEVICE_STATE REPLY */
 #define SI446X_CMD_REPLY_COUNT_REQUEST_DEVICE_STATE 2
-        /* macros for entire REPLY CURR_STATE access of type U8 */
-        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_TYPE U8
+        /* macros for entire REPLY CURR_STATE access of type uint8_t */
+        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_TYPE uint8_t
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_SIZE 8
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_MASK 0xff
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_MSB 7
@@ -1745,15 +1745,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_MAIN_STATE_ENUM_RX_TUNE 6
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_MAIN_STATE_ENUM_TX 7
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURR_STATE_MAIN_STATE_ENUM_RX 8
-        /* macros for entire REPLY CURRENT_CHANNEL access of type U8 */
-        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_TYPE U8
+        /* macros for entire REPLY CURRENT_CHANNEL access of type uint8_t */
+        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_SIZE 8
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_MASK 0xff
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_MSB 7
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_LSB 0
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_INDEX 2
         /* macros for field CURRENT_CHANNEL access */
-        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_CURRENT_CHANNEL_TYPE U8
+        #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_CURRENT_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_CURRENT_CHANNEL_SIZE 8
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_CURRENT_CHANNEL_MASK 0xff
         #define SI446X_CMD_REQUEST_DEVICE_STATE_REP_CURRENT_CHANNEL_CURRENT_CHANNEL_MSB 7
@@ -1762,8 +1762,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_CHANGE_STATE 0x34
 /* CHANGE_STATE ARGS */
 #define SI446X_CMD_ARG_COUNT_CHANGE_STATE 2
-        /* macros for entire ARG NEXT_STATE1 access of type U8 */
-        #define SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_TYPE U8
+        /* macros for entire ARG NEXT_STATE1 access of type uint8_t */
+        #define SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_TYPE uint8_t
         #define SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_SIZE 8
         #define SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_MASK 0xff
         #define SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_MSB 7
@@ -1793,8 +1793,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_READ_CMD_BUFF 1
 /* READ_CMD_BUFF REPLY */
 #define SI446X_CMD_REPLY_COUNT_READ_CMD_BUFF 16
-        /* macros for entire REPLY BYTE access of type U8 */
-        #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_TYPE U8
+        /* macros for entire REPLY BYTE access of type uint8_t */
+        #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_TYPE uint8_t
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_SIZE 8
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_MASK 0xff
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_MSB 7
@@ -1802,7 +1802,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_INDEX 1
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_ARRAY_LEN 16
         /* macros for field CMD_BUFF access */
-        #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_CMD_BUFF_TYPE U8
+        #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_CMD_BUFF_TYPE uint8_t
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_CMD_BUFF_SIZE 8
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_CMD_BUFF_MASK 0xff
         #define SI446X_CMD_READ_CMD_BUFF_REP_BYTE_CMD_BUFF_MSB 7
@@ -1813,57 +1813,57 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_FRR_A_READ 1
 /* FRR_A_READ REPLY */
 #define SI446X_CMD_REPLY_COUNT_FRR_A_READ 4
-        /* macros for entire REPLY FRR_A_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_A_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_INDEX 0
         /* macros for field FRR_A_VALUE access */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_A_VALUE_FRR_A_VALUE_INDEX 0
-        /* macros for entire REPLY FRR_B_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_B_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_INDEX 1
         /* macros for field FRR_B_VALUE access */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_B_VALUE_FRR_B_VALUE_INDEX 1
-        /* macros for entire REPLY FRR_C_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_C_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_INDEX 2
         /* macros for field FRR_C_VALUE access */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_C_VALUE_FRR_C_VALUE_INDEX 2
-        /* macros for entire REPLY FRR_D_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_D_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_INDEX 3
         /* macros for field FRR_D_VALUE access */
-        #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_A_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MSB 7
@@ -1874,57 +1874,57 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_FRR_B_READ 1
 /* FRR_B_READ REPLY */
 #define SI446X_CMD_REPLY_COUNT_FRR_B_READ 4
-        /* macros for entire REPLY FRR_B_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_B_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_INDEX 0
         /* macros for field FRR_B_VALUE access */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_B_VALUE_FRR_B_VALUE_INDEX 0
-        /* macros for entire REPLY FRR_C_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_C_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_INDEX 1
         /* macros for field FRR_C_VALUE access */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_C_VALUE_FRR_C_VALUE_INDEX 1
-        /* macros for entire REPLY FRR_D_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_D_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_INDEX 2
         /* macros for field FRR_D_VALUE access */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_D_VALUE_FRR_D_VALUE_INDEX 2
-        /* macros for entire REPLY FRR_A_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_A_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_INDEX 3
         /* macros for field FRR_A_VALUE access */
-        #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_B_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MSB 7
@@ -1935,57 +1935,57 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_FRR_C_READ 1
 /* FRR_C_READ REPLY */
 #define SI446X_CMD_REPLY_COUNT_FRR_C_READ 4
-        /* macros for entire REPLY FRR_C_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_C_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_INDEX 0
         /* macros for field FRR_C_VALUE access */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_C_VALUE_FRR_C_VALUE_INDEX 0
-        /* macros for entire REPLY FRR_D_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_D_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_INDEX 1
         /* macros for field FRR_D_VALUE access */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_D_VALUE_FRR_D_VALUE_INDEX 1
-        /* macros for entire REPLY FRR_A_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_A_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_INDEX 2
         /* macros for field FRR_A_VALUE access */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_A_VALUE_FRR_A_VALUE_INDEX 2
-        /* macros for entire REPLY FRR_B_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_B_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_INDEX 3
         /* macros for field FRR_B_VALUE access */
-        #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_C_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MSB 7
@@ -1996,57 +1996,57 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_FRR_D_READ 1
 /* FRR_D_READ REPLY */
 #define SI446X_CMD_REPLY_COUNT_FRR_D_READ 4
-        /* macros for entire REPLY FRR_D_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_D_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_INDEX 0
         /* macros for field FRR_D_VALUE access */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_D_VALUE_FRR_D_VALUE_INDEX 0
-        /* macros for entire REPLY FRR_A_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_A_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_INDEX 1
         /* macros for field FRR_A_VALUE access */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_A_VALUE_FRR_A_VALUE_INDEX 1
-        /* macros for entire REPLY FRR_B_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_B_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_INDEX 2
         /* macros for field FRR_B_VALUE access */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_B_VALUE_FRR_B_VALUE_INDEX 2
-        /* macros for entire REPLY FRR_C_VALUE access of type U8 */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_TYPE U8
+        /* macros for entire REPLY FRR_C_VALUE access of type uint8_t */
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_MSB 7
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_LSB 0
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_INDEX 3
         /* macros for field FRR_C_VALUE access */
-        #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE U8
+        #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_FRR_C_VALUE_TYPE uint8_t
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_FRR_C_VALUE_SIZE 8
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MASK 0xff
         #define SI446X_CMD_FRR_D_READ_REP_FRR_C_VALUE_FRR_C_VALUE_MSB 7
@@ -2057,8 +2057,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_IRCAL 0x17
 /* IRCAL ARGS */
 #define SI446X_CMD_ARG_COUNT_IRCAL 5
-        /* macros for entire ARG SEARCHING_STEP_SIZE access of type U8 */
-        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_TYPE U8
+        /* macros for entire ARG SEARCHING_STEP_SIZE access of type uint8_t */
+        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_SIZE 8
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_MASK 0xff
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_MSB 7
@@ -2078,7 +2078,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_INITIAL_PH_AMP_ENUM_ENUM_0 1
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_INITIAL_PH_AMP_ENUM_ENUM_1 0
         /* macros for field FINE_STEP_SIZE access */
-        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_TYPE U8
+        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_SIZE 2
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_MASK 0x30
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_MSB 5
@@ -2086,15 +2086,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_INDEX 1
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_FINE_STEP_SIZE_value (((cmd.arg.IRCAL.SEARCHING_STEP_SIZE & 0x30)) >> 4)
         /* macros for field COARSE_STEP_SIZE access */
-        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_TYPE U8
+        #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_SIZE 4
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_MASK 0xf
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_MSB 3
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_LSB 0
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_INDEX 1
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_STEP_SIZE_COARSE_STEP_SIZE_value (((cmd.arg.IRCAL.SEARCHING_STEP_SIZE & 0xf)))
-        /* macros for entire ARG SEARCHING_RSSI_AVG access of type U8 */
-        #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_TYPE U8
+        /* macros for entire ARG SEARCHING_RSSI_AVG access of type uint8_t */
+        #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_SIZE 8
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_MASK 0xff
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_MSB 7
@@ -2161,8 +2161,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_RSSI_COARSE_AVG_ENUM_ENUM_1 1
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_RSSI_COARSE_AVG_ENUM_ENUM_2 2
         #define SI446X_CMD_IRCAL_ARG_SEARCHING_RSSI_AVG_RSSI_COARSE_AVG_ENUM_ENUM_3 3
-        /* macros for entire ARG RX_CHAIN_SETTING1 access of type U8 */
-        #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_TYPE U8
+        /* macros for entire ARG RX_CHAIN_SETTING1 access of type uint8_t */
+        #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_SIZE 8
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_MASK 0xff
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_MSB 7
@@ -2233,8 +2233,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_PGA_GAIN_ENUM_ENUM_5 5
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_PGA_GAIN_ENUM_ENUM_6 6
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING1_PGA_GAIN_ENUM_ENUM_7 7
-        /* macros for entire ARG RX_CHAIN_SETTING2 access of type U8 */
-        #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING2_TYPE U8
+        /* macros for entire ARG RX_CHAIN_SETTING2 access of type uint8_t */
+        #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING2_TYPE uint8_t
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING2_SIZE 8
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING2_MASK 0xff
         #define SI446X_CMD_IRCAL_ARG_RX_CHAIN_SETTING2_MSB 7
@@ -2269,8 +2269,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_IRCAL_MANUAL 0x1a
 /* IRCAL_MANUAL ARGS */
 #define SI446X_CMD_ARG_COUNT_IRCAL_MANUAL 3
-        /* macros for entire ARG IRCAL_AMP access of type U8 */
-        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_TYPE U8
+        /* macros for entire ARG IRCAL_AMP access of type uint8_t */
+        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_SIZE 8
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_MASK 0xff
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_MSB 7
@@ -2302,15 +2302,15 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_SIGN_ENUM_POS 0
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_SIGN_ENUM_NEG 1
         /* macros for field IRCAL_AMP_MAG access */
-        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_TYPE U8
+        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_SIZE 5
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_MASK 0x1f
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_MSB 4
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_LSB 0
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_INDEX 1
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_AMP_IRCAL_AMP_MAG_value (((cmd.arg.IRCAL_MANUAL.IRCAL_AMP & 0x1f)))
-        /* macros for entire ARG IRCAL_PH access of type U8 */
-        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_TYPE U8
+        /* macros for entire ARG IRCAL_PH access of type uint8_t */
+        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_SIZE 8
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_MASK 0xff
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_MSB 7
@@ -2342,7 +2342,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_SIGN_ENUM_POS 0
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_SIGN_ENUM_NEG 1
         /* macros for field IRCAL_PH_MAG access */
-        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_TYPE U8
+        #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_SIZE 5
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_MASK 0x1f
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_MSB 4
@@ -2351,8 +2351,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_MANUAL_ARG_IRCAL_PH_IRCAL_PH_MAG_value (((cmd.arg.IRCAL_MANUAL.IRCAL_PH & 0x1f)))
 /* IRCAL_MANUAL REPLY */
 #define SI446X_CMD_REPLY_COUNT_IRCAL_MANUAL 2
-        /* macros for entire REPLY IRCAL_AMP_REPLY access of type U8 */
-        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_TYPE U8
+        /* macros for entire REPLY IRCAL_AMP_REPLY access of type uint8_t */
+        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_SIZE 8
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_MASK 0xff
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_MSB 7
@@ -2369,14 +2369,14 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_SIGN_ENUM_POS 0
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_SIGN_ENUM_NEG 1
         /* macros for field IRCAL_AMP_MAG access */
-        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_TYPE U8
+        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_SIZE 5
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_MASK 0x1f
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_MSB 4
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_LSB 0
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_AMP_REPLY_IRCAL_AMP_MAG_INDEX 1
-        /* macros for entire REPLY IRCAL_PH_REPLY access of type U8 */
-        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_TYPE U8
+        /* macros for entire REPLY IRCAL_PH_REPLY access of type uint8_t */
+        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_SIZE 8
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_MASK 0xff
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_MSB 7
@@ -2393,7 +2393,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_PH_SIGN_ENUM_POS 0
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_PH_SIGN_ENUM_NEG 1
         /* macros for field IRCAL_AMP_PH access */
-        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_AMP_PH_TYPE U8
+        #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_AMP_PH_TYPE uint8_t
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_AMP_PH_SIZE 5
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_AMP_PH_MASK 0x1f
         #define SI446X_CMD_IRCAL_MANUAL_REP_IRCAL_PH_REPLY_IRCAL_AMP_PH_MSB 4
@@ -2404,8 +2404,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_START_TX 0x31
 /* START_TX ARGS */
 #define SI446X_CMD_ARG_COUNT_START_TX 7
-        /* macros for entire ARG CHANNEL access of type U8 */
-        #define SI446X_CMD_START_TX_ARG_CHANNEL_TYPE U8
+        /* macros for entire ARG CHANNEL access of type uint8_t */
+        #define SI446X_CMD_START_TX_ARG_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_CHANNEL_SIZE 8
         #define SI446X_CMD_START_TX_ARG_CHANNEL_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_CHANNEL_MSB 7
@@ -2413,7 +2413,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_CHANNEL_INDEX 1
         #define SI446X_CMD_START_TX_ARG_CHANNEL_value (((cmd.arg.START_TX.CHANNEL)))
         /* macros for field CHANNEL access */
-        #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_TYPE U8
+        #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_SIZE 8
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_MSB 7
@@ -2422,8 +2422,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_MIN 0x0
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_MAX 0xff
         #define SI446X_CMD_START_TX_ARG_CHANNEL_CHANNEL_value (((cmd.arg.START_TX.CHANNEL & 0xff)))
-        /* macros for entire ARG CONDITION access of type U8 */
-        #define SI446X_CMD_START_TX_ARG_CONDITION_TYPE U8
+        /* macros for entire ARG CONDITION access of type uint8_t */
+        #define SI446X_CMD_START_TX_ARG_CONDITION_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_CONDITION_SIZE 8
         #define SI446X_CMD_START_TX_ARG_CONDITION_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_CONDITION_MSB 7
@@ -2499,8 +2499,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_TX_LEN_TX_LEN_MIN 0x0
         #define SI446X_CMD_START_TX_ARG_TX_LEN_TX_LEN_MAX 0x1fff
         #define SI446X_CMD_START_TX_ARG_TX_LEN_TX_LEN_value (((cmd.arg.START_TX.TX_LEN & 0x1fff)))
-        /* macros for entire ARG TX_DELAY access of type U8 */
-        #define SI446X_CMD_START_TX_ARG_TX_DELAY_TYPE U8
+        /* macros for entire ARG TX_DELAY access of type uint8_t */
+        #define SI446X_CMD_START_TX_ARG_TX_DELAY_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_SIZE 8
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_MSB 7
@@ -2508,7 +2508,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_INDEX 5
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_value (((cmd.arg.START_TX.TX_DELAY)))
         /* macros for field TX_DELAY access */
-        #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_TYPE U8
+        #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_SIZE 8
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_MSB 7
@@ -2517,8 +2517,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_MIN 0x0
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_MAX 0x80
         #define SI446X_CMD_START_TX_ARG_TX_DELAY_TX_DELAY_value (((cmd.arg.START_TX.TX_DELAY & 0xff)))
-        /* macros for entire ARG NUM_REPEAT access of type U8 */
-        #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_TYPE U8
+        /* macros for entire ARG NUM_REPEAT access of type uint8_t */
+        #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_SIZE 8
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_MSB 7
@@ -2526,7 +2526,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_INDEX 6
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_value (((cmd.arg.START_TX.NUM_REPEAT)))
         /* macros for field NUM_REPEAT access */
-        #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_NUM_REPEAT_TYPE U8
+        #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_NUM_REPEAT_TYPE uint8_t
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_NUM_REPEAT_SIZE 8
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_NUM_REPEAT_MASK 0xff
         #define SI446X_CMD_START_TX_ARG_NUM_REPEAT_NUM_REPEAT_MSB 7
@@ -2545,8 +2545,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_WRITE_TX_FIFO 0x66
 /* WRITE_TX_FIFO ARGS */
 #define SI446X_CMD_ARG_COUNT_WRITE_TX_FIFO 3
-        /* macros for entire ARG DATA access of type U8 */
-        #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_TYPE U8
+        /* macros for entire ARG DATA access of type uint8_t */
+        #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_TYPE uint8_t
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_SIZE 8
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_MASK 0xff
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_MSB 7
@@ -2555,7 +2555,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_ARRAY_LEN 2
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_value(i) (((cmd.arg.WRITE_TX_FIFO.DATA[(i)])))
         /* macros for field DATA access */
-        #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_DATA_TYPE U8
+        #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_DATA_TYPE uint8_t
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_DATA_SIZE 8
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_DATA_MASK 0xff
         #define SI446X_CMD_WRITE_TX_FIFO_ARG_DATA_DATA_MSB 7
@@ -2567,8 +2567,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_PACKET_INFO 0x16
 /* PACKET_INFO ARGS */
 #define SI446X_CMD_ARG_COUNT_PACKET_INFO 6
-        /* macros for entire ARG FIELD_NUMBER access of type U8 */
-        #define SI446X_CMD_PACKET_INFO_ARG_FIELD_NUMBER_TYPE U8
+        /* macros for entire ARG FIELD_NUMBER access of type uint8_t */
+        #define SI446X_CMD_PACKET_INFO_ARG_FIELD_NUMBER_TYPE uint8_t
         #define SI446X_CMD_PACKET_INFO_ARG_FIELD_NUMBER_SIZE 8
         #define SI446X_CMD_PACKET_INFO_ARG_FIELD_NUMBER_MASK 0xff
         #define SI446X_CMD_PACKET_INFO_ARG_FIELD_NUMBER_MSB 7
@@ -2644,8 +2644,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_MODEM_STATUS 0x22
 /* GET_MODEM_STATUS ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_MODEM_STATUS 2
-        /* macros for entire ARG MODEM_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_TYPE U8
+        /* macros for entire ARG MODEM_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_MSB 7
@@ -2734,8 +2734,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_MODEM_STATUS_ARG_MODEM_CLR_PEND_SYNC_DETECT_PEND_CLR_value (((cmd.arg.GET_MODEM_STATUS.MODEM_CLR_PEND & 0x1)))
 /* GET_MODEM_STATUS REPLY */
 #define SI446X_CMD_REPLY_COUNT_GET_MODEM_STATUS 8
-        /* macros for entire REPLY MODEM_PEND access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_TYPE U8
+        /* macros for entire REPLY MODEM_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_MSB 7
@@ -2805,8 +2805,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_MSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_PEND_SYNC_DETECT_PEND_INDEX 1
-        /* macros for entire REPLY MODEM_STATUS access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_TYPE U8
+        /* macros for entire REPLY MODEM_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_MSB 7
@@ -2876,57 +2876,57 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_SYNC_DETECT_MSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_SYNC_DETECT_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_MODEM_STATUS_SYNC_DETECT_INDEX 2
-        /* macros for entire REPLY CURR_RSSI access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_TYPE U8
+        /* macros for entire REPLY CURR_RSSI access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_INDEX 3
         /* macros for field CURR_RSSI access */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_TYPE U8
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_CURR_RSSI_CURR_RSSI_INDEX 3
-        /* macros for entire REPLY LATCH_RSSI access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_TYPE U8
+        /* macros for entire REPLY LATCH_RSSI access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_INDEX 4
         /* macros for field LATCH_RSSI access */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_TYPE U8
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_LATCH_RSSI_LATCH_RSSI_INDEX 4
-        /* macros for entire REPLY ANT1_RSSI access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_TYPE U8
+        /* macros for entire REPLY ANT1_RSSI access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_INDEX 5
         /* macros for field ANT1_RSSI access */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_TYPE U8
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT1_RSSI_ANT1_RSSI_INDEX 5
-        /* macros for entire REPLY ANT2_RSSI access of type U8 */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_TYPE U8
+        /* macros for entire REPLY ANT2_RSSI access of type uint8_t */
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_MSB 7
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_LSB 0
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_INDEX 6
         /* macros for field ANT2_RSSI access */
-        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_ANT2_RSSI_TYPE U8
+        #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_ANT2_RSSI_TYPE uint8_t
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_ANT2_RSSI_SIZE 8
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_ANT2_RSSI_MASK 0xff
         #define SI446X_CMD_GET_MODEM_STATUS_REP_ANT2_RSSI_ANT2_RSSI_MSB 7
@@ -2949,8 +2949,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_START_RX 0x32
 /* START_RX ARGS */
 #define SI446X_CMD_ARG_COUNT_START_RX 8
-        /* macros for entire ARG CHANNEL access of type U8 */
-        #define SI446X_CMD_START_RX_ARG_CHANNEL_TYPE U8
+        /* macros for entire ARG CHANNEL access of type uint8_t */
+        #define SI446X_CMD_START_RX_ARG_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_CHANNEL_SIZE 8
         #define SI446X_CMD_START_RX_ARG_CHANNEL_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_CHANNEL_MSB 7
@@ -2958,7 +2958,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_RX_ARG_CHANNEL_INDEX 1
         #define SI446X_CMD_START_RX_ARG_CHANNEL_value (((cmd.arg.START_RX.CHANNEL)))
         /* macros for field CHANNEL access */
-        #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_TYPE U8
+        #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_SIZE 8
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_MSB 7
@@ -2967,8 +2967,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_MIN 0x0
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_MAX 0xff
         #define SI446X_CMD_START_RX_ARG_CHANNEL_CHANNEL_value (((cmd.arg.START_RX.CHANNEL & 0xff)))
-        /* macros for entire ARG CONDITION access of type U8 */
-        #define SI446X_CMD_START_RX_ARG_CONDITION_TYPE U8
+        /* macros for entire ARG CONDITION access of type uint8_t */
+        #define SI446X_CMD_START_RX_ARG_CONDITION_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_CONDITION_SIZE 8
         #define SI446X_CMD_START_RX_ARG_CONDITION_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_CONDITION_MSB 7
@@ -3015,8 +3015,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_RX_ARG_RX_LEN_RX_LEN_MIN 0x0
         #define SI446X_CMD_START_RX_ARG_RX_LEN_RX_LEN_MAX 0x1fff
         #define SI446X_CMD_START_RX_ARG_RX_LEN_RX_LEN_value (((cmd.arg.START_RX.RX_LEN & 0x1fff)))
-        /* macros for entire ARG NEXT_STATE1 access of type U8 */
-        #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_TYPE U8
+        /* macros for entire ARG NEXT_STATE1 access of type uint8_t */
+        #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_SIZE 8
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_MSB 7
@@ -3041,8 +3041,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_RXTIMEOUT_STATE_ENUM_TX 7
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_RXTIMEOUT_STATE_ENUM_RX 8
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE1_RXTIMEOUT_STATE_ENUM_RX_IDLE 9
-        /* macros for entire ARG NEXT_STATE2 access of type U8 */
-        #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_TYPE U8
+        /* macros for entire ARG NEXT_STATE2 access of type uint8_t */
+        #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_SIZE 8
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_MSB 7
@@ -3066,8 +3066,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_RXVALID_STATE_ENUM_RX_TUNE 6
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_RXVALID_STATE_ENUM_TX 7
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE2_RXVALID_STATE_ENUM_RX 8
-        /* macros for entire ARG NEXT_STATE3 access of type U8 */
-        #define SI446X_CMD_START_RX_ARG_NEXT_STATE3_TYPE U8
+        /* macros for entire ARG NEXT_STATE3 access of type uint8_t */
+        #define SI446X_CMD_START_RX_ARG_NEXT_STATE3_TYPE uint8_t
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE3_SIZE 8
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE3_MASK 0xff
         #define SI446X_CMD_START_RX_ARG_NEXT_STATE3_MSB 7
@@ -3096,8 +3096,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_RX_HOP 0x36
 /* RX_HOP ARGS */
 #define SI446X_CMD_ARG_COUNT_RX_HOP 7
-        /* macros for entire ARG INTE access of type U8 */
-        #define SI446X_CMD_RX_HOP_ARG_INTE_TYPE U8
+        /* macros for entire ARG INTE access of type uint8_t */
+        #define SI446X_CMD_RX_HOP_ARG_INTE_TYPE uint8_t
         #define SI446X_CMD_RX_HOP_ARG_INTE_SIZE 8
         #define SI446X_CMD_RX_HOP_ARG_INTE_MASK 0xff
         #define SI446X_CMD_RX_HOP_ARG_INTE_MSB 7
@@ -3105,7 +3105,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_RX_HOP_ARG_INTE_INDEX 1
         #define SI446X_CMD_RX_HOP_ARG_INTE_value (((cmd.arg.RX_HOP.INTE)))
         /* macros for field INTE access */
-        #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_TYPE U8
+        #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_TYPE uint8_t
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_SIZE 8
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_MASK 0xff
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_MSB 7
@@ -3114,8 +3114,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_MIN 0x0
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_MAX 0x7f
         #define SI446X_CMD_RX_HOP_ARG_INTE_INTE_value (((cmd.arg.RX_HOP.INTE & 0xff)))
-        /* macros for entire ARG FRAC access of type U8 */
-        #define SI446X_CMD_RX_HOP_ARG_FRAC_TYPE U8
+        /* macros for entire ARG FRAC access of type uint8_t */
+        #define SI446X_CMD_RX_HOP_ARG_FRAC_TYPE uint8_t
         #define SI446X_CMD_RX_HOP_ARG_FRAC_SIZE 24
         #define SI446X_CMD_RX_HOP_ARG_FRAC_MASK 0xffffff
         #define SI446X_CMD_RX_HOP_ARG_FRAC_MSB 23
@@ -3125,7 +3125,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_RX_HOP_ARG_FRAC_15_8_value (((cmd.arg.RX_HOP.FRAC[1])))
         #define SI446X_CMD_RX_HOP_ARG_FRAC_7_0_value (((cmd.arg.RX_HOP.FRAC[2])))
         /* macros for field FRAC access */
-        #define SI446X_CMD_RX_HOP_ARG_FRAC_FRAC_TYPE U8
+        #define SI446X_CMD_RX_HOP_ARG_FRAC_FRAC_TYPE uint8_t
         #define SI446X_CMD_RX_HOP_ARG_FRAC_FRAC_SIZE 20
         #define SI446X_CMD_RX_HOP_ARG_FRAC_FRAC_INDEX 2
         #define SI446X_CMD_RX_HOP_ARG_FRAC_FRAC_MIN 0x80000
@@ -3158,8 +3158,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ARG_COUNT_READ_RX_FIFO 1
 /* READ_RX_FIFO REPLY */
 #define SI446X_CMD_REPLY_COUNT_READ_RX_FIFO 2
-        /* macros for entire REPLY DATA access of type U8 */
-        #define SI446X_CMD_READ_RX_FIFO_REP_DATA_TYPE U8
+        /* macros for entire REPLY DATA access of type uint8_t */
+        #define SI446X_CMD_READ_RX_FIFO_REP_DATA_TYPE uint8_t
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_SIZE 8
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_MASK 0xff
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_MSB 7
@@ -3167,7 +3167,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_INDEX 0
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_ARRAY_LEN 2
         /* macros for field DATA access */
-        #define SI446X_CMD_READ_RX_FIFO_REP_DATA_DATA_TYPE U8
+        #define SI446X_CMD_READ_RX_FIFO_REP_DATA_DATA_TYPE uint8_t
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_DATA_SIZE 8
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_DATA_MASK 0xff
         #define SI446X_CMD_READ_RX_FIFO_REP_DATA_DATA_MSB 7
@@ -3178,8 +3178,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_ADC_READING 0x14
 /* GET_ADC_READING ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_ADC_READING 3
-        /* macros for entire ARG ADC_EN access of type U8 */
-        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_TYPE U8
+        /* macros for entire ARG ADC_EN access of type uint8_t */
+        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_TYPE uint8_t
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_SIZE 8
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_MASK 0xff
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_MSB 7
@@ -3234,8 +3234,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_ADC_GPIO_PIN_ENUM_ENUM_1 1
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_ADC_GPIO_PIN_ENUM_ENUM_2 2
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_EN_ADC_GPIO_PIN_ENUM_ENUM_3 3
-        /* macros for entire ARG ADC_CFG access of type U8 */
-        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_TYPE U8
+        /* macros for entire ARG ADC_CFG access of type uint8_t */
+        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_TYPE uint8_t
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_SIZE 8
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_MASK 0xff
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_MSB 7
@@ -3243,7 +3243,7 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_INDEX 2
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_value (((cmd.arg.GET_ADC_READING.ADC_CFG)))
         /* macros for field UDTIME access */
-        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_UDTIME_TYPE U8
+        #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_UDTIME_TYPE uint8_t
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_UDTIME_SIZE 4
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_UDTIME_MASK 0xf0
         #define SI446X_CMD_GET_ADC_READING_ARG_ADC_CFG_UDTIME_MSB 7
@@ -3310,8 +3310,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_PH_STATUS 0x21
 /* GET_PH_STATUS ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_PH_STATUS 2
-        /* macros for entire ARG PH_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_TYPE U8
+        /* macros for entire ARG PH_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_MSB 7
@@ -3400,8 +3400,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PH_STATUS_ARG_PH_CLR_PEND_RX_FIFO_ALMOST_FULL_PEND_CLR_value (((cmd.arg.GET_PH_STATUS.PH_CLR_PEND & 0x1)))
 /* GET_PH_STATUS REPLY */
 #define SI446X_CMD_REPLY_COUNT_GET_PH_STATUS 2
-        /* macros for entire REPLY PH_PEND access of type U8 */
-        #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_TYPE U8
+        /* macros for entire REPLY PH_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_SIZE 8
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_MASK 0xff
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_MSB 7
@@ -3471,8 +3471,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_MSB 0
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_LSB 0
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_PEND_RX_FIFO_ALMOST_FULL_PEND_INDEX 1
-        /* macros for entire REPLY PH_STATUS access of type U8 */
-        #define SI446X_CMD_GET_PH_STATUS_REP_PH_STATUS_TYPE U8
+        /* macros for entire REPLY PH_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_PH_STATUS_REP_PH_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_STATUS_SIZE 8
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_STATUS_MASK 0xff
         #define SI446X_CMD_GET_PH_STATUS_REP_PH_STATUS_MSB 7
@@ -3545,8 +3545,8 @@ union si446x_cmd_reply_union {
 #define SI446X_CMD_ID_GET_CHIP_STATUS 0x23
 /* GET_CHIP_STATUS ARGS */
 #define SI446X_CMD_ARG_COUNT_GET_CHIP_STATUS 2
-        /* macros for entire ARG CHIP_CLR_PEND access of type U8 */
-        #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_TYPE U8
+        /* macros for entire ARG CHIP_CLR_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_SIZE 8
         #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_MASK 0xff
         #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_MSB 7
@@ -3625,8 +3625,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_CHIP_STATUS_ARG_CHIP_CLR_PEND_WUT_PEND_CLR_value (((cmd.arg.GET_CHIP_STATUS.CHIP_CLR_PEND & 0x1)))
 /* GET_CHIP_STATUS REPLY */
 #define SI446X_CMD_REPLY_COUNT_GET_CHIP_STATUS 4
-        /* macros for entire REPLY CHIP_PEND access of type U8 */
-        #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_TYPE U8
+        /* macros for entire REPLY CHIP_PEND access of type uint8_t */
+        #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_TYPE uint8_t
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_SIZE 8
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_MASK 0xff
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_MSB 7
@@ -3688,8 +3688,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_WUT_PEND_MSB 0
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_WUT_PEND_LSB 0
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_WUT_PEND_INDEX 1
-        /* macros for entire REPLY CHIP_STATUS access of type U8 */
-        #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_TYPE U8
+        /* macros for entire REPLY CHIP_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_SIZE 8
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_MASK 0xff
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_MSB 7
@@ -3751,8 +3751,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_WUT_MSB 0
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_WUT_LSB 0
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_STATUS_WUT_INDEX 2
-        /* macros for entire REPLY CMD_ERR_STATUS access of type U8 */
-        #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_TYPE U8
+        /* macros for entire REPLY CMD_ERR_STATUS access of type uint8_t */
+        #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_TYPE uint8_t
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_SIZE 8
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_MASK 0xff
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_MSB 7
@@ -3772,8 +3772,8 @@ union si446x_cmd_reply_union {
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_CMD_ERR_STATUS_ENUM_CMD_ERROR_INVALID_STATE 19
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_CMD_ERR_STATUS_ENUM_CMD_ERROR_BAD_BOOTMODE 49
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_STATUS_CMD_ERR_STATUS_ENUM_CMD_ERROR_BAD_PROPERTY 64
-        /* macros for entire REPLY CMD_ERR_CMD_ID access of type U8 */
-        #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_CMD_ID_TYPE U8
+        /* macros for entire REPLY CMD_ERR_CMD_ID access of type uint8_t */
+        #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_CMD_ID_TYPE uint8_t
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_CMD_ID_SIZE 8
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_CMD_ID_MASK 0xff
         #define SI446X_CMD_GET_CHIP_STATUS_REP_CMD_ERR_CMD_ID_MSB 7

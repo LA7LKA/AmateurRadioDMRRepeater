@@ -80,7 +80,11 @@ Arguemnts:
 	printf("Program started!\n\r");
 
 	while(1)
-		sleep(10000);
+	{
+		vRadio_StartTx(0, (uint8_t *)0xff);
+		sleep(1);
+	}
+
 
 
 	return 0;

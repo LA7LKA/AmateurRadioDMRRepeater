@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <wiringPi.h>
-#include <wiringPiSPI.h>
+#include <bcm2835.h>
 
 /*
 Connections for one module on vero board

@@ -24,7 +24,7 @@ FLAGS ?= -O3
 # Flags to pass to the compiler for debug builds
 DEBUG_FLAGS ?= -O0 -g
 # Flags to pass to the linker
-LDFLAGS ?= -lwiringPi 
+LDFLAGS ?= -lwiringPi -lbcm2835
 # Type of product to build: "shared" for a shared library, "static" for a static library, empty for standalone
 LIBRARY ?= 
 # Prefix to the path that the "install" target will install into. libs to $(PREFIX)/lib, executables to $(PREFIX)/bin

@@ -64,53 +64,47 @@ BIT radio_hal_NirqLevel(void)
     return RF_NIRQ;
 }
 
-void radio_hal_SpiWriteByte(U8 byteToWrite)
+void radio_hal_SpiWriteByte(uint8_t byteToWrite)
 {
 
-	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)byteToWrite, 1) == -1)
+	if (bcm2835_spi_transfer(byteToWrite) == -1)
 	{
-	  printf("SPI failure: %s\n", strerror (errno));
+	  printf("radio_hal_SpiWriteByte SPI failure: %s\n", strerror (errno));
 	 
 	}
 	
 }
 
-U8 radio_hal_SpiReadByte(void)
+uint8_t radio_hal_SpiReadByte(void)
 {
 
-	uint8_t result;
 
-	result = wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)0xFF, 1);
+
+	uint8_t result = bcm2835_spi_transfer(0xFF);
 
 	if(result == -1)
 	{
-	  printf("SPI failure: %s\n", strerror (errno));
+	  printf("radio_hal_SpiReadByte SPI failure: %s\n", strerror (errno));
 	  return -1;
 	}
 
 	return result;
 }
 
-void radio_hal_SpiWriteData(U8 byteCount, U8* pData)
+void radio_hal_SpiWriteData(uint8_t byteCount, uint8_t* pData)
 {
 
-	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)pData, byteCount) == -1)
-	{
-	  printf("SPI failure: %s\n", strerror (errno));
-	  
-	}
+
 	
+	bcm2835_spi_writenb((char *)pData,(uint32_t)byteCount);
 
 }
 
-void radio_hal_SpiReadData(U8 byteCount, U8* pData)
+void radio_hal_SpiReadData(uint8_t byteCount, uint8_t* pData)
 {
 
-	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)pData, byteCount) == -1)
-	{
-	  printf("SPI failure: %s\n", strerror (errno));
-	  
-	}
+	bcm2835_spi_writenb((char *)pData,(uint32_t)byteCount);
+
 
 
 }

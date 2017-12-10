@@ -8,7 +8,7 @@
  */
 
 #include "radio.h"
-
+#include "radio_config.h"
 /*****************************************************************************
  *  Local Macros & Definitions
  *****************************************************************************/
@@ -17,7 +17,7 @@
  *  Global Variables
  *****************************************************************************/
 /*
-const SEGMENT_VARIABLE(Radio_Configuration_Data_Array[], U8, SEG_CODE) = \
+const SEGMENT_VARIABLE(Radio_Configuration_Data_Array[], uint8_t, SEG_CODE) = \
               RADIO_CONFIGURATION_DATA_ARRAY;
 
 const SEGMENT_VARIABLE(RadioConfiguration, tRadioConfiguration, SEG_CODE) = \
@@ -39,7 +39,7 @@ void vRadio_PowerUp(void);
 void vRadio_PowerUp(void)
 {
   //SEGMENT_VARIABLE(wDelay,  U16, SEG_XDATA) = 0u;
-  //SEGMENT_VARIABLE(lBootOpt, U8, SEG_XDATA) = 0u;
+  //SEGMENT_VARIABLE(lBootOpt, uint8_t, SEG_XDATA) = 0u;
   U16 wDelay;
   /* Hardware reset the chip */
   si446x_reset();
@@ -64,15 +64,11 @@ void vRadio_Init(void)
   vRadio_PowerUp();
 
   /* Load radio configuration */
-	/*
-  while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray))
-  {
+ si446x_configuration_init(Radio_ConfigJAU);
+ 
 
-    for (wDelay = 0x7FFF; wDelay--; ) ;
-    // Power Up the radio chip 
-    vRadio_PowerUp();
-  }
-*/
+
+
   // Read ITs, clear pending ones
   si446x_get_int_status(0u, 0u, 0u);
 }
@@ -85,7 +81,7 @@ void vRadio_Init(void)
  *  @note
  *
  */
-void vRadio_StartRX(U8 channel)
+void vRadio_StartRX(uint8_t channel)
 {
   // Read ITs, clear pending ones
   si446x_get_int_status(0u, 0u, 0u);
@@ -107,7 +103,7 @@ void vRadio_StartRX(U8 channel)
  *  @note
  *
  */
-void vRadio_StartTx(U8 channel, U8 *pioFixRadioPacket)
+void vRadio_StartTx(uint8_t channel, uint8_t *pioFixRadioPacket)
 {
   // Read ITs, clear pending ones
   si446x_get_int_status(0u, 0u, 0u);

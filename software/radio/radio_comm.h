@@ -28,7 +28,7 @@
                  *     G L O B A L   V A R I A B L E S     *
                  * ======================================= */
 
-//extern SEGMENT_VARIABLE(radioCmd[16u], U8, SEG_XDATA);
+//extern SEGMENT_VARIABLE(radioCmd[16u], uint8_t, SEG_XDATA);
 
 
                 /* ======================================= *
@@ -36,15 +36,15 @@
                  * ======================================= */
 
 
-  U8 radio_comm_GetResp(U8 byteCount, U8* pData);
-void radio_comm_SendCmd(U8 byteCount, U8* pData);
-void radio_comm_ReadData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData);
-void radio_comm_WriteData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData);
+  uint8_t radio_comm_GetResp(uint8_t byteCount, uint8_t* pData);
+void radio_comm_SendCmd(uint8_t byteCount, uint8_t* pData);
+void radio_comm_ReadData(uint8_t cmd, BIT pollCts, uint8_t byteCount, uint8_t* pData);
+void radio_comm_WriteData(uint8_t cmd, BIT pollCts, uint8_t byteCount, uint8_t* pData);
 
 
-U8 radio_comm_PollCTS(void);
-U8 radio_comm_SendCmdGetResp(U8 cmdByteCount, U8* pCmdData, \
-                             U8 respByteCount, U8* pRespData);
+uint8_t radio_comm_PollCTS(void);
+uint8_t radio_comm_SendCmdGetResp(uint8_t cmdByteCount, uint8_t* pCmdData, \
+                             uint8_t respByteCount, uint8_t* pRespData);
 void radio_comm_ClearCTS(void);
 
 

@@ -13,10 +13,10 @@
 
 
 //SEGMENT_VARIABLE( Si446xCmd, union si446x_cmd_reply_union, SEG_XDATA );
-//SEGMENT_VARIABLE( Pro2Cmd[16], U8, SEG_XDATA );
+//SEGMENT_VARIABLE( Pro2Cmd[16], uint8_t, SEG_XDATA );
 
 #ifdef SI446X_PATCH_CMDS
-SEGMENT_VARIABLE( Si446xPatchCommands[][8] = { SI446X_PATCH_CMDS }, U8, SEG_CODE);
+SEGMENT_VARIABLE( Si446xPatchCommands[][8] = { SI446X_PATCH_CMDS }, uint8_t, SEG_CODE);
 #endif
 
 
@@ -28,7 +28,7 @@ SEGMENT_VARIABLE( Si446xPatchCommands[][8] = { SI446X_PATCH_CMDS }, U8, SEG_CODE
  */
 void si446x_reset(void)
 {
-    U8 loopCount;
+    uint8_t loopCount;
 
     /* Put radio in shutdown, wait then release */
     radio_hal_AssertShutdown();
@@ -43,15 +43,15 @@ void si446x_reset(void)
  * This function is used to initialize after power-up the radio chip.
  * Before this function @si446x_reset should be called.
  */
-void si446x_power_up(U8 BOOT_OPTIONS, U8 XTAL_OPTIONS, U32 XO_FREQ)
+void si446x_power_up(uint8_t BOOT_OPTIONS, uint8_t XTAL_OPTIONS, U32 XO_FREQ)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_POWER_UP;
     Pro2Cmd[1] = BOOT_OPTIONS;
     Pro2Cmd[2] = XTAL_OPTIONS;
-    Pro2Cmd[3] = (U8)(XO_FREQ >> 24);
-    Pro2Cmd[4] = (U8)(XO_FREQ >> 16);
-    Pro2Cmd[5] = (U8)(XO_FREQ >> 8);
-    Pro2Cmd[6] = (U8)(XO_FREQ);
+    Pro2Cmd[3] = (uint8_t)(XO_FREQ >> 24);
+    Pro2Cmd[4] = (uint8_t)(XO_FREQ >> 16);
+    Pro2Cmd[5] = (uint8_t)(XO_FREQ >> 8);
+    Pro2Cmd[6] = (uint8_t)(XO_FREQ);
 
     radio_comm_SendCmd( SI446X_CMD_ARG_COUNT_POWER_UP, Pro2Cmd );
 }
@@ -60,24 +60,23 @@ void si446x_power_up(U8 BOOT_OPTIONS, U8 XTAL_OPTIONS, U32 XO_FREQ)
  * This function is used to load all properties and commands with a list of NULL terminated commands.
  * Before this function @si446x_reset should be called.
  */
-U8 si446x_configuration_init(const U8* pSetPropCmd)
+uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
 {
-  //SEGMENT_VARIABLE(col, U8, SEG_DATA);
-  //SEGMENT_VARIABLE(numOfBytes, U8, SEG_DATA);
-
-  /* While cycle as far as the pointer points to a command */
+  //SEGMENT_VARIABLE(col, uint8_t, SEG_DATA);
+  //SEGMENT_VARIABLE(numOfBytes, uint8_t, SEG_DATA);
+  // While cycle as far as the pointer points to a command
   while (*pSetPropCmd != 0x00)
   {
-    /* Commands structure in the array:
-     * --------------------------------
-     * LEN | <LEN length of data>
-     */
+    // Commands structure in the array:
+     // --------------------------------
+     // LEN | <LEN length of data>
+     //
 
     uint8_t numOfBytes = *pSetPropCmd++;
 
     if (numOfBytes > 16u)
     {
-      /* Number of command bytes exceeds maximal allowable length */
+      // Number of command bytes exceeds maximal allowable length 
       return SI446X_COMMAND_ERROR;
     }
 
@@ -89,7 +88,7 @@ U8 si446x_configuration_init(const U8* pSetPropCmd)
 
     if (radio_comm_SendCmdGetResp(numOfBytes, Pro2Cmd, 0, 0) != 0xFF)
     {
-      /* Timeout occured */
+      // Timeout occured
       return SI446X_CTS_TIMEOUT;
     }
 /*
@@ -103,7 +102,12 @@ U8 si446x_configuration_init(const U8* pSetPropCmd)
       }
     }
 */
-  }
+
+ }
+
+	
+
+ 
 
   return SI446X_SUCCESS;
 }
@@ -137,13 +141,13 @@ void si446x_part_info(void)
  * @param CONDITION Start TX condition.
  * @param TX_LEN    Payload length (exclude the PH generated CRC).
  */
-void si446x_start_tx(U8 CHANNEL, U8 CONDITION, U16 TX_LEN)
+void si446x_start_tx(uint8_t CHANNEL, uint8_t CONDITION, U16 TX_LEN)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_START_TX;
     Pro2Cmd[1] = CHANNEL;
     Pro2Cmd[2] = CONDITION;
-    Pro2Cmd[3] = (U8)(TX_LEN >> 8);
-    Pro2Cmd[4] = (U8)(TX_LEN);
+    Pro2Cmd[3] = (uint8_t)(TX_LEN >> 8);
+    Pro2Cmd[4] = (uint8_t)(TX_LEN);
     Pro2Cmd[5] = 0x00;
 
     // Don't repeat the packet, 
@@ -163,13 +167,13 @@ void si446x_start_tx(U8 CHANNEL, U8 CONDITION, U16 TX_LEN)
  * @param NEXT_STATE2 Next state when a valid packet received.
  * @param NEXT_STATE3 Next state when invalid packet received (e.g. CRC error).
  */
-void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NEXT_STATE2, U8 NEXT_STATE3)
+void si446x_start_rx(uint8_t CHANNEL, uint8_t CONDITION, U16 RX_LEN, uint8_t NEXT_STATE1, uint8_t NEXT_STATE2, uint8_t NEXT_STATE3)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_START_RX;
     Pro2Cmd[1] = CHANNEL;
     Pro2Cmd[2] = CONDITION;
-    Pro2Cmd[3] = (U8)(RX_LEN >> 8);
-    Pro2Cmd[4] = (U8)(RX_LEN);
+    Pro2Cmd[3] = (uint8_t)(RX_LEN >> 8);
+    Pro2Cmd[4] = (uint8_t)(RX_LEN);
     Pro2Cmd[5] = NEXT_STATE1;
     Pro2Cmd[6] = NEXT_STATE2;
     Pro2Cmd[7] = NEXT_STATE3;
@@ -184,7 +188,7 @@ void si446x_start_rx(U8 CHANNEL, U8 CONDITION, U16 RX_LEN, U8 NEXT_STATE1, U8 NE
  * @param MODEM_CLR_PEND  Modem Status pending flags clear.
  * @param CHIP_CLR_PEND   Chip State pending flags clear.
  */
-void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND)
+void si446x_get_int_status(uint8_t PH_CLR_PEND, uint8_t MODEM_CLR_PEND, uint8_t CHIP_CLR_PEND)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_INT_STATUS;
     Pro2Cmd[1] = PH_CLR_PEND;
@@ -219,7 +223,7 @@ void si446x_get_int_status(U8 PH_CLR_PEND, U8 MODEM_CLR_PEND, U8 CHIP_CLR_PEND)
  * @param SDO         SDO configuration.
  * @param GEN_CONFIG  General pin configuration.
  */
-void si446x_gpio_pin_cfg(U8 GPIO0, U8 GPIO1, U8 GPIO2, U8 GPIO3, U8 NIRQ, U8 SDO, U8 GEN_CONFIG)
+void si446x_gpio_pin_cfg(uint8_t GPIO0, uint8_t GPIO1, uint8_t GPIO2, uint8_t GPIO3, uint8_t NIRQ, uint8_t SDO, uint8_t GEN_CONFIG)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GPIO_PIN_CFG;
     Pro2Cmd[1] = GPIO0;
@@ -256,10 +260,10 @@ void si446x_gpio_pin_cfg(U8 GPIO0, U8 GPIO1, U8 GPIO2, U8 GPIO3, U8 NIRQ, U8 SDO
 #ifdef __C51__
 #pragma maxargs (13)  /* allow 13 bytes for parameters */
 #endif
-void si446x_set_property( U8 GROUP, U8 NUM_PROPS, U8 START_PROP, ... )
+void si446x_set_property( uint8_t GROUP, uint8_t NUM_PROPS, uint8_t START_PROP, ... )
 {
     va_list argList;
-    U8 cmdIndex;
+    uint8_t cmdIndex;
 
     Pro2Cmd[0] = SI446X_CMD_ID_SET_PROPERTY;
     Pro2Cmd[1] = GROUP;
@@ -270,7 +274,7 @@ void si446x_set_property( U8 GROUP, U8 NUM_PROPS, U8 START_PROP, ... )
     cmdIndex = 4;
     while(NUM_PROPS--)
     {
-        Pro2Cmd[cmdIndex] = va_arg (argList, U8);
+        Pro2Cmd[cmdIndex] = va_arg (argList, int);
         cmdIndex++;
     }
     va_end(argList);
@@ -283,7 +287,7 @@ void si446x_set_property( U8 GROUP, U8 NUM_PROPS, U8 START_PROP, ... )
  *
  * @param NEXT_STATE1 Next state.
  */
-void si446x_change_state(U8 NEXT_STATE1)
+void si446x_change_state(uint8_t NEXT_STATE1)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_CHANGE_STATE;
     Pro2Cmd[1] = NEXT_STATE1;
@@ -310,7 +314,7 @@ void si446x_nop(void)
  *
  * @param FIFO  RX/TX FIFO reset flags.
  */
-void si446x_fifo_info(U8 FIFO)
+void si446x_fifo_info(uint8_t FIFO)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_FIFO_INFO;
     Pro2Cmd[1] = FIFO;
@@ -328,9 +332,9 @@ void si446x_fifo_info(U8 FIFO)
  * The function can be used to load data into TX FIFO.
  *
  * @param numBytes  Data length to be load.
- * @param pTxData   Pointer to the data (U8*).
+ * @param pTxData   Pointer to the data (uint8_t*).
  */
-void si446x_write_tx_fifo(U8 numBytes, U8* pTxData)
+void si446x_write_tx_fifo(uint8_t numBytes, uint8_t* pTxData)
 {
   radio_comm_WriteData( SI446X_CMD_ID_WRITE_TX_FIFO, 0, numBytes, pTxData );
 }
@@ -341,7 +345,7 @@ void si446x_write_tx_fifo(U8 numBytes, U8* pTxData)
  * @param numBytes  Data length to be read.
  * @param pRxData   Pointer to the buffer location.
  */
-void si446x_read_rx_fifo(U8 numBytes, U8* pRxData)
+void si446x_read_rx_fifo(uint8_t numBytes, uint8_t* pRxData)
 {
   radio_comm_ReadData( SI446X_CMD_ID_READ_RX_FIFO, 0, numBytes, pRxData );
 }
@@ -353,7 +357,7 @@ void si446x_read_rx_fifo(U8 numBytes, U8* pRxData)
  * @param NUM_PROPS   Number of properties to be read.
  * @param START_PROP  Starting sub-property number.
  */
-void si446x_get_property(U8 GROUP, U8 NUM_PROPS, U8 START_PROP)
+void si446x_get_property(uint8_t GROUP, uint8_t NUM_PROPS, uint8_t START_PROP)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_PROPERTY;
     Pro2Cmd[1] = GROUP;
@@ -410,7 +414,7 @@ void si446x_func_info(void)
  *
  * @param respByteCount Number of Fast Response Registers to be read.
  */
-void si446x_frr_a_read(U8 respByteCount)
+void si446x_frr_a_read(uint8_t respByteCount)
 {
     radio_comm_ReadData(SI446X_CMD_ID_FRR_A_READ,
                             0,
@@ -428,7 +432,7 @@ void si446x_frr_a_read(U8 respByteCount)
  *
  * @param respByteCount Number of Fast Response Registers to be read.
  */
-void si446x_frr_b_read(U8 respByteCount)
+void si446x_frr_b_read(uint8_t respByteCount)
 {
     radio_comm_ReadData(SI446X_CMD_ID_FRR_B_READ,
                             0,
@@ -446,7 +450,7 @@ void si446x_frr_b_read(U8 respByteCount)
  *
  * @param respByteCount Number of Fast Response Registers to be read.
  */
-void si446x_frr_c_read(U8 respByteCount)
+void si446x_frr_c_read(uint8_t respByteCount)
 {
     radio_comm_ReadData(SI446X_CMD_ID_FRR_C_READ,
                             0,
@@ -464,7 +468,7 @@ void si446x_frr_c_read(U8 respByteCount)
  *
  * @param respByteCount Number of Fast Response Registers to be read.
  */
-void si446x_frr_d_read(U8 respByteCount)
+void si446x_frr_d_read(uint8_t respByteCount)
 {
     radio_comm_ReadData(SI446X_CMD_ID_FRR_D_READ,
                             0,
@@ -482,7 +486,7 @@ void si446x_frr_d_read(U8 respByteCount)
  *
  * @param ADC_EN  ADC enable parameter.
  */
-void si446x_get_adc_reading(U8 ADC_EN)
+void si446x_get_adc_reading(uint8_t ADC_EN)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_ADC_READING;
     Pro2Cmd[1] = ADC_EN;
@@ -508,16 +512,16 @@ void si446x_get_adc_reading(U8 ADC_EN)
  * @param LEN               Length value.
  * @param DIFF_LEN          Difference length.
  */
-void si446x_get_packet_info(U8 FIELD_NUMBER_MASK, U16 LEN, S16 DIFF_LEN )
+void si446x_get_packet_info(uint8_t FIELD_NUMBER_MASK, U16 LEN, S16 DIFF_LEN )
 {
     Pro2Cmd[0] = SI446X_CMD_ID_PACKET_INFO;
     Pro2Cmd[1] = FIELD_NUMBER_MASK;
-    Pro2Cmd[2] = (U8)(LEN >> 8);
-    Pro2Cmd[3] = (U8)(LEN);
+    Pro2Cmd[2] = (uint8_t)(LEN >> 8);
+    Pro2Cmd[3] = (uint8_t)(LEN);
     // the different of the byte, althrough it is signed, but to command hander
     // it can treat it as unsigned
-    Pro2Cmd[4] = (U8)((U16)DIFF_LEN >> 8);
-    Pro2Cmd[5] = (U8)(DIFF_LEN);
+    Pro2Cmd[4] = (uint8_t)((U16)DIFF_LEN >> 8);
+    Pro2Cmd[5] = (uint8_t)(DIFF_LEN);
 
     radio_comm_SendCmdGetResp( SI446X_CMD_ARG_COUNT_PACKET_INFO,
                               Pro2Cmd,
@@ -533,7 +537,7 @@ void si446x_get_packet_info(U8 FIELD_NUMBER_MASK, U16 LEN, S16 DIFF_LEN )
  *
  * @param PH_CLR_PEND Flags to clear.
  */
-void si446x_get_ph_status(U8 PH_CLR_PEND)
+void si446x_get_ph_status(uint8_t PH_CLR_PEND)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_PH_STATUS;
     Pro2Cmd[1] = PH_CLR_PEND;
@@ -552,7 +556,7 @@ void si446x_get_ph_status(U8 PH_CLR_PEND)
  *
  * @param MODEM_CLR_PEND Flags to clear.
  */
-void si446x_get_modem_status( U8 MODEM_CLR_PEND )
+void si446x_get_modem_status( uint8_t MODEM_CLR_PEND )
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_MODEM_STATUS;
     Pro2Cmd[1] = MODEM_CLR_PEND;
@@ -577,7 +581,7 @@ void si446x_get_modem_status( U8 MODEM_CLR_PEND )
  *
  * @param CHIP_CLR_PEND Flags to clear.
  */
-void si446x_get_chip_status( U8 CHIP_CLR_PEND )
+void si446x_get_chip_status( uint8_t CHIP_CLR_PEND )
 {
     Pro2Cmd[0] = SI446X_CMD_ID_GET_CHIP_STATUS;
     Pro2Cmd[1] = CHIP_CLR_PEND;
@@ -600,7 +604,7 @@ void si446x_get_chip_status( U8 CHIP_CLR_PEND )
  * @param RX_CHAIN_SETTING1
  * @param RX_CHAIN_SETTING2
  */
-void si446x_ircal(U8 SEARCHING_STEP_SIZE, U8 SEARCHING_RSSI_AVG, U8 RX_CHAIN_SETTING1, U8 RX_CHAIN_SETTING2)
+void si446x_ircal(uint8_t SEARCHING_STEP_SIZE, uint8_t SEARCHING_RSSI_AVG, uint8_t RX_CHAIN_SETTING1, uint8_t RX_CHAIN_SETTING2)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_IRCAL;
     Pro2Cmd[1] = SEARCHING_STEP_SIZE;
@@ -618,7 +622,7 @@ void si446x_ircal(U8 SEARCHING_STEP_SIZE, U8 SEARCHING_RSSI_AVG, U8 RX_CHAIN_SET
  * @param IRCAL_AMP
  * @param IRCAL_PH
  */
-void si446x_ircal_manual(U8 IRCAL_AMP, U8 IRCAL_PH)
+void si446x_ircal_manual(uint8_t IRCAL_AMP, uint8_t IRCAL_PH)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_IRCAL_MANUAL;
     Pro2Cmd[1] = IRCAL_AMP;
@@ -661,7 +665,7 @@ void si446x_request_device_state(void)
  * @param PLL_SETTLE_TIME1  New PLL_SETTLE_TIME1 register value.
  * @param PLL_SETTLE_TIME0  New PLL_SETTLE_TIME0 register value.
  */
-void si446x_tx_hop(U8 INTE, U8 FRAC2, U8 FRAC1, U8 FRAC0, U8 VCO_CNT1, U8 VCO_CNT0, U8 PLL_SETTLE_TIME1, U8 PLL_SETTLE_TIME0)
+void si446x_tx_hop(uint8_t INTE, uint8_t FRAC2, uint8_t FRAC1, uint8_t FRAC0, uint8_t VCO_CNT1, uint8_t VCO_CNT0, uint8_t PLL_SETTLE_TIME1, uint8_t PLL_SETTLE_TIME0)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_TX_HOP;
     Pro2Cmd[1] = INTE;
@@ -686,7 +690,7 @@ void si446x_tx_hop(U8 INTE, U8 FRAC2, U8 FRAC1, U8 FRAC0, U8 VCO_CNT1, U8 VCO_CN
  * @param VCO_CNT1  New VCO_CNT1 register value.
  * @param VCO_CNT0  New VCO_CNT0 register value.
  */
-void si446x_rx_hop(U8 INTE, U8 FRAC2, U8 FRAC1, U8 FRAC0, U8 VCO_CNT1, U8 VCO_CNT0)
+void si446x_rx_hop(uint8_t INTE, uint8_t FRAC2, uint8_t FRAC1, uint8_t FRAC0, uint8_t VCO_CNT1, uint8_t VCO_CNT0)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_RX_HOP;
     Pro2Cmd[1] = INTE;
@@ -875,7 +879,7 @@ void si446x_get_chip_status_fast_clear_read( void )
  * Resets the RX/TX FIFO. Does not read back anything from TX/RX FIFO
  *
  */
-void si446x_fifo_info_fast_reset(U8 FIFO)
+void si446x_fifo_info_fast_reset(uint8_t FIFO)
 {
     Pro2Cmd[0] = SI446X_CMD_ID_FIFO_INFO;
     Pro2Cmd[1] = FIFO;

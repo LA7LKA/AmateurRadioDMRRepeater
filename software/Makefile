@@ -17,7 +17,7 @@ NAME ?= DMRRPT
 # The file suffix of source files, can be .c or .cpp
 SUFFIX ?= .c
 # List of directories containing source files to be compiled
-DIRS ?= . Setup/
+DIRS ?= . Setup/ radio/ radio/Si446x/
 # Flags to pass to the compiler for release builds
 FLAGS ?= -O3
 # Flags to pass to the compiler for debug builds

@@ -8,7 +8,7 @@ This is the main file for the project...
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include <unistd.h>
 #include "Setup/hardware.h"
 
 //int main( int argc, char * argv [] ) {
@@ -76,10 +76,11 @@ Arguemnts:
 		printf("Hardware init ok!\n\r");
 
 
-	
-	
+	printf("Program started!\n\r");
 
-	
+	while(1)
+		sleep(10000);
+
 
 	return 0;
 }

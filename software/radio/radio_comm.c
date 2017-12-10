@@ -13,7 +13,8 @@
                  *              I N C L U D E              *
                  * ======================================= */
 
-#include "..\..\bsp.h"
+
+#include "radio_comm.h"
 
                 /* ======================================= *
                  *          D E F I N I T I O N S          *
@@ -48,8 +49,10 @@ BIT ctsWentHigh = 0;
  */
 U8 radio_comm_GetResp(U8 byteCount, U8* pData)
 {
-  SEGMENT_VARIABLE(ctsVal = 0u, U8, SEG_DATA);
-  SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
+  //SEGMENT_VARIABLE(ctsVal = 0u, U8, SEG_DATA);
+  //SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
+
+	uint8_t errCnt = 1, ctsVal;
 
   while (errCnt != 0)      //wait until radio IC is ready with the data
   {

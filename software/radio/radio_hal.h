@@ -9,17 +9,28 @@
  * Copyright 2011 Silicon Laboratories, Inc.
  */
 
-#ifndef _RADIO_HAL_H_
-#define _RADIO_HAL_H_
 
                 /* ======================================= *
                  *              I N C L U D E              *
                  * ======================================= */
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <string.h>
+#include <errno.h>
+#include "../Setup/hardware.h"
 
                 /* ======================================= *
                  *          D E F I N I T I O N S          *
                  * ======================================= */
-
+#define U16 uint16_t
+#define U32 uint32_t
+#define BIT uint8_t
+#define U8 uint8_t
+#define RF_NIRQ 1 //Not sure what this one does!
                 /* ======================================= *
                  *     G L O B A L   V A R I A B L E S     *
                  * ======================================= */
@@ -47,4 +58,4 @@ void radio_hal_SpiReadData(U8 byteCount, U8* pData);
   BIT radio_hal_Gpio3Level(void);
 #endif
 
-#endif //_RADIO_HAL_H_
+

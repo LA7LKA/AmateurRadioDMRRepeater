@@ -10,7 +10,7 @@ This is the main file for the project...
 #include <stdlib.h>
 #include <unistd.h>
 #include "Setup/hardware.h"
-
+#include "radio.h"
 //int main( int argc, char * argv [] ) {
 int main(void)
 {
@@ -75,7 +75,8 @@ Arguemnts:
 	else
 		printf("Hardware init ok!\n\r");
 
-
+ // Initialize the Radio
+  vRadio_Init();
 	printf("Program started!\n\r");
 
 	while(1)

@@ -12,8 +12,8 @@
 
 
 #include "si446x_cmd.h"
-#include "../radio_comm.h"
-#include "../radio_hal.h"
+#include "radio_comm.h"
+#include "radio_hal.h"
 #include <stdarg.h>
 
 

@@ -4,7 +4,7 @@
 
 #include "hardware.h"
 
-
+#include "../radio/Si446x/si446x_nirq.h"
 
 int InitHardware(void)
 {
@@ -20,13 +20,13 @@ int InitHardware(void)
 
 	//SPI setup
 
-	if(wiringPiSPISetup (0, 100000)  < 0) //SPI channel 0 and 500Khz bus clock speed
+	if(wiringPiSPISetup (SPI_CHAN, 500000)  < 0) //SPI channel 0 and 500Khz bus clock speed
 	{		
 		printf("SPI init fail!\n\r");
 		return 1;
 	}
 
-	wiringPiISR(IRQ_TX, INT_EDGE_FALLING, &Irq_tx_module);
+	wiringPiISR(IRQ_TX, INT_EDGE_FALLING, &si446x_nirq_process);
 
 
 	return 0;

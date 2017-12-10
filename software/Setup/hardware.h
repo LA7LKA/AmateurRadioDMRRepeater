@@ -30,4 +30,7 @@ http://wiringpi.com/pins/
 #define		IRQ_TX		3
 
 
+
+#define SPI_CHAN 0
+
 int InitHardware(void);

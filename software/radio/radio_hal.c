@@ -13,8 +13,7 @@
                  *              I N C L U D E              *
                  * ======================================= */
 
-#include "..\..\bsp.h"
-
+#include "radio_hal.h"
 
                 /* ======================================= *
                  *          D E F I N I T I O N S          *
@@ -34,30 +33,30 @@
 
 void radio_hal_AssertShutdown(void)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  RF_PWRDN = 1;
-#else
-  PWRDN = 1;
-#endif
+
+  //PWRDN = 1;
+	digitalWrite(SDN_TX, HIGH);
+
 }
 
 void radio_hal_DeassertShutdown(void)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  RF_PWRDN = 0;
-#else
-  PWRDN = 0;
-#endif
+
+  //PWRDN = 0;
+
+	digitalWrite(SDN_TX, LOW);
 }
 
 void radio_hal_ClearNsel(void)
 {
-    RF_NSEL = 0;
+    //RF_NSEL = 0;
+	digitalWrite(nSEL_TX, LOW);
 }
 
 void radio_hal_SetNsel(void)
 {
-    RF_NSEL = 1;
+    //RF_NSEL = 1;
+	digitalWrite(nSEL_TX, HIGH);
 }
 
 BIT radio_hal_NirqLevel(void)
@@ -67,38 +66,53 @@ BIT radio_hal_NirqLevel(void)
 
 void radio_hal_SpiWriteByte(U8 byteToWrite)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  bSpi_ReadWriteSpi1(byteToWrite);
-#else
-  SpiReadWrite(byteToWrite);
-#endif
+
+	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)byteToWrite, 1) == -1)
+	{
+	  printf("SPI failure: %s\n", strerror (errno));
+	 
+	}
+	
 }
 
 U8 radio_hal_SpiReadByte(void)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  return bSpi_ReadWriteSpi1(0xFF);
-#else
-  return SpiReadWrite(0xFF);
-#endif
+
+	uint8_t result;
+
+	result = wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)0xFF, 1);
+
+	if(result == -1)
+	{
+	  printf("SPI failure: %s\n", strerror (errno));
+	  return -1;
+	}
+
+	return result;
 }
 
 void radio_hal_SpiWriteData(U8 byteCount, U8* pData)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  vSpi_WriteDataSpi1(byteCount, pData);
-#else
-  SpiWriteData(byteCount, pData);
-#endif
+
+	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)pData, byteCount) == -1)
+	{
+	  printf("SPI failure: %s\n", strerror (errno));
+	  
+	}
+	
+
 }
 
 void radio_hal_SpiReadData(U8 byteCount, U8* pData)
 {
-#if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFORM_WMB)
-  vSpi_ReadDataSpi1(byteCount, pData);
-#else
-  SpiReadData(byteCount, pData);
-#endif
+
+	if (wiringPiSPIDataRW(SPI_CHAN, (unsigned char *)pData, byteCount) == -1)
+	{
+	  printf("SPI failure: %s\n", strerror (errno));
+	  
+	}
+
+
 }
 
 #ifdef RADIO_DRIVER_EXTENDED_SUPPORT

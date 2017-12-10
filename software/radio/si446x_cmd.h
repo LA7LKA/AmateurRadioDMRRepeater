@@ -16,7 +16,7 @@
 
 
 
-#include "../radio_hal.h"
+#include "radio_hal.h"
 
 /* This section contains command map declarations */
 struct si446x_reply_GENERIC_map {

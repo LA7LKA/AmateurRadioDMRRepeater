@@ -43,8 +43,7 @@ void radio_comm_WriteData(uint8_t cmd, BIT pollCts, uint8_t byteCount, uint8_t* 
 
 
 uint8_t radio_comm_PollCTS(void);
-uint8_t radio_comm_SendCmdGetResp(uint8_t cmdByteCount, uint8_t* pCmdData, \
-                             uint8_t respByteCount, uint8_t* pRespData);
+uint8_t radio_comm_SendCmdGetResp(uint8_t cmdByteCount, uint8_t* pCmdData, uint8_t respByteCount, uint8_t* pRespData);
 void radio_comm_ClearCTS(void);
 
 

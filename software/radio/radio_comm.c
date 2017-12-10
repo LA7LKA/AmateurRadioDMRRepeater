@@ -52,7 +52,8 @@ uint8_t radio_comm_GetResp(uint8_t byteCount, uint8_t* pData)
   //SEGMENT_VARIABLE(ctsVal = 0u, uint8_t, SEG_DATA);
   //SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
 
-	uint8_t errCnt = 1, ctsVal;
+
+	uint8_t errCnt = 0, ctsVal;
 
   while (errCnt != 0)      //wait until radio IC is ready with the data
   {
@@ -99,10 +100,12 @@ uint8_t radio_comm_GetResp(uint8_t byteCount, uint8_t* pData)
  */
 void radio_comm_SendCmd(uint8_t byteCount, uint8_t* pData)
 {
-    while (!ctsWentHigh)
+/*  
+  while (!ctsWentHigh)
     {
         radio_comm_PollCTS();
     }
+*/
     radio_hal_ClearNsel();
     radio_hal_SpiWriteData(byteCount, pData);
     radio_hal_SetNsel();

@@ -66,6 +66,7 @@ BIT radio_hal_NirqLevel(void)
 
 void radio_hal_SpiWriteByte(uint8_t byteToWrite)
 {
+	//printf("radio_hal_SpiWriteByte: %x", byteToWrite);
 
 	if (bcm2835_spi_transfer(byteToWrite) == -1)
 	{
@@ -93,9 +94,10 @@ uint8_t radio_hal_SpiReadByte(void)
 
 void radio_hal_SpiWriteData(uint8_t byteCount, uint8_t* pData)
 {
-
-
-	
+	/*	
+	for(uint8_t i = 0; sizeof(pData) > 0;i++)
+		printf("radio_hal_SpiWriteData: %x", pData[i]);
+	*/
 	bcm2835_spi_writenb((char *)pData,(uint32_t)byteCount);
 
 }

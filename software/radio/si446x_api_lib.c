@@ -60,10 +60,12 @@ void si446x_power_up(uint8_t BOOT_OPTIONS, uint8_t XTAL_OPTIONS, U32 XO_FREQ)
  * This function is used to load all properties and commands with a list of NULL terminated commands.
  * Before this function @si446x_reset should be called.
  */
-uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
+//uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
+uint8_t si446x_configuration_init(uint8_t pSetPropCmd[][32])
 {
   //SEGMENT_VARIABLE(col, uint8_t, SEG_DATA);
   //SEGMENT_VARIABLE(numOfBytes, uint8_t, SEG_DATA);
+/*
   // While cycle as far as the pointer points to a command
   while (*pSetPropCmd != 0x00)
   {
@@ -91,7 +93,7 @@ uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
       // Timeout occured
       return SI446X_CTS_TIMEOUT;
     }
-/*
+
     if (radio_hal_NirqLevel() == 0)
     {
       // Get and clear all interrupts.  An error has occured...
@@ -101,9 +103,28 @@ uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
         return SI446X_COMMAND_ERROR;
       }
     }
+}
 */
 
- }
+/*
+		for(int i=0; i < 32;i++)
+		{
+			printf("%d\n\r", i);
+
+    		if (radio_comm_SendCmdGetResp(sizeof(pSetPropCmd[i]), pSetPropCmd[i], 0, 0) != 0xFF)
+    		{
+      			// Timeout occured
+				printf("Timeout occured!\n\r");
+      			return SI446X_CTS_TIMEOUT;
+    		}
+		}
+
+ */
+	for(int i=0; i < 32;i++)
+	{
+		printf("%d\n\r", i);
+		bcm2835_spi_writenb((char *)pSetPropCmd[i],sizeof(pSetPropCmd[i]));
+	}
 
 	
 

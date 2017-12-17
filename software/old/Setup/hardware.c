@@ -14,7 +14,7 @@ int InitHardware(void)
 	wiringPiSetup(); //Init library 
 
 	pinMode(SDN_TX, OUTPUT);
-	pinMode(nSEL_TX, OUTPUT);
+	//pinMode(nSEL_TX, OUTPUT);
 	//pinMode(IRQ_TX, INPUT);
 
 

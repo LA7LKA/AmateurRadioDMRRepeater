@@ -64,7 +64,7 @@ void vRadio_Init(void)
   vRadio_PowerUp();
 
   /* Load radio configuration */
- si446x_configuration_init(Radio_ConfigJAU);
+ si446x_configuration_init();
  
 
 

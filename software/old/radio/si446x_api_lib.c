@@ -10,7 +10,8 @@
  */
 
 #include "si446x_api_lib.h"
-
+#include "../radio_config.h"
+#include "../radio_config_par.h"
 
 //SEGMENT_VARIABLE( Si446xCmd, union si446x_cmd_reply_union, SEG_XDATA );
 //SEGMENT_VARIABLE( Pro2Cmd[16], uint8_t, SEG_XDATA );
@@ -60,9 +61,9 @@ void si446x_power_up(uint8_t BOOT_OPTIONS, uint8_t XTAL_OPTIONS, U32 XO_FREQ)
  * This function is used to load all properties and commands with a list of NULL terminated commands.
  * Before this function @si446x_reset should be called.
  */
-//uint8_t si446x_configuration_init(uint8_t* pSetPropCmd)
-uint8_t si446x_configuration_init(uint8_t pSetPropCmd[][32])
+uint8_t si446x_configuration_init(void)
 {
+
   //SEGMENT_VARIABLE(col, uint8_t, SEG_DATA);
   //SEGMENT_VARIABLE(numOfBytes, uint8_t, SEG_DATA);
 /*
@@ -120,15 +121,80 @@ uint8_t si446x_configuration_init(uint8_t pSetPropCmd[][32])
 		}
 
  */
-	for(int i=0; i < 32;i++)
-	{
-		printf("%d\n\r", i);
-		bcm2835_spi_writenb((char *)pSetPropCmd[i],sizeof(pSetPropCmd[i]));
-	}
 
+
+		
+			
+			
+			
+		//printf("%\n\r");
+		//bcm2835_spi_writenb((char *)pSetPropCmd[i],sizeof(pSetPropCmd[i]));
+	//}
+
+	//Copy radio config to pointer...	
+
+	uint16_t milliseconds = 10;
 	
-
- 
+	bcm2835_spi_writenb((char *)RF_POWER_UP,sizeof(RF_POWER_UP));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_GPIO_PIN_CFG,sizeof(RF_GPIO_PIN_CFG));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_GLOBAL_XO_TUNE_2,sizeof(RF_GLOBAL_XO_TUNE_2));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_GLOBAL_CONFIG_1,sizeof(RF_GLOBAL_CONFIG_1));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_INT_CTL_ENABLE_2,sizeof(RF_INT_CTL_ENABLE_2));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_FRR_CTL_A_MODE_4,sizeof(RF_FRR_CTL_A_MODE_4));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PREAMBLE_TX_LENGTH_9,sizeof(RF_PREAMBLE_TX_LENGTH_9));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_SYNC_CONFIG_5,sizeof(RF_SYNC_CONFIG_5));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PKT_CRC_CONFIG_7,sizeof(RF_PKT_CRC_CONFIG_7));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PKT_LEN_12,sizeof(RF_PKT_LEN_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PKT_FIELD_2_CRC_CONFIG_12,sizeof(RF_PKT_FIELD_2_CRC_CONFIG_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PKT_FIELD_5_CRC_CONFIG_12,sizeof(RF_PKT_FIELD_5_CRC_CONFIG_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PKT_RX_FIELD_3_CRC_CONFIG_9,sizeof(RF_PKT_RX_FIELD_3_CRC_CONFIG_9));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_MOD_TYPE_12,sizeof(RF_MODEM_MOD_TYPE_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_FREQ_DEV_0_1,sizeof(RF_MODEM_FREQ_DEV_0_1));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_TX_RAMP_DELAY_8,sizeof(RF_MODEM_TX_RAMP_DELAY_8));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_BCR_OSR_1_9,sizeof(RF_MODEM_BCR_OSR_1_9));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_AFC_GEAR_7,sizeof(RF_MODEM_AFC_GEAR_7));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_AGC_CONTROL_1,sizeof(RF_MODEM_AGC_CONTROL_1));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_AGC_WINDOW_SIZE_9,sizeof(RF_MODEM_AGC_WINDOW_SIZE_9));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_OOK_CNT1_9,sizeof(RF_MODEM_OOK_CNT1_9));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_RSSI_CONTROL_1,sizeof(RF_MODEM_RSSI_CONTROL_1));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_CLKGEN_BAND_1,sizeof(RF_MODEM_CLKGEN_BAND_1));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_CHFLT_RX1_CHFLT_COE13_7_0_12,sizeof(RF_MODEM_CHFLT_RX1_CHFLT_COE13_7_0_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_CHFLT_RX1_CHFLT_COE1_7_0_12,sizeof(RF_MODEM_CHFLT_RX1_CHFLT_COE1_7_0_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MODEM_CHFLT_RX2_CHFLT_COE7_7_0_12,sizeof(RF_MODEM_CHFLT_RX2_CHFLT_COE7_7_0_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_PA_MODE_4,sizeof(RF_PA_MODE_4));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_SYNTH_PFDCP_CPFF_7,sizeof(RF_SYNTH_PFDCP_CPFF_7));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_MATCH_VALUE_1_12,sizeof(RF_MATCH_VALUE_1_12));
+	usleep(milliseconds * 1000);
+	bcm2835_spi_writenb((char *)RF_FREQ_CONTROL_INTE_8,sizeof(RF_FREQ_CONTROL_INTE_8));
+	usleep(milliseconds * 1000);
 
   return SI446X_SUCCESS;
 }

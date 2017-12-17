@@ -50,13 +50,13 @@ void radio_hal_DeassertShutdown(void)
 void radio_hal_ClearNsel(void)
 {
     //RF_NSEL = 0;
-	digitalWrite(nSEL_TX, LOW);
+	bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, LOW);
 }
 
 void radio_hal_SetNsel(void)
 {
     //RF_NSEL = 1;
-	digitalWrite(nSEL_TX, HIGH);
+	bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, HIGH);
 }
 
 BIT radio_hal_NirqLevel(void)

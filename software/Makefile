@@ -15,7 +15,7 @@
 # The name of the product to build (default uses parent directory name)
 NAME ?= DMRRPT
 # The file suffix of source files, can be .c or .cpp
-SUFFIX ?= .cpp
+SUFFIX ?= .c
 # List of directories containing source files to be compiled
 DIRS ?= . src/
  

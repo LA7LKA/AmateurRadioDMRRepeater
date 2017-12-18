@@ -19,6 +19,8 @@ Managed to get SPI communication up and running with one Si4463 RF IC.</p>
  <caption>Hookup with one radio module to Raspberry Pi 3</caption>
   <tr>
     <th>Raspberry Pi 3 Pin</th>
+  </tr>
+  <tr>
     <th>Si4463 module/th>
   </tr>
   <tr>

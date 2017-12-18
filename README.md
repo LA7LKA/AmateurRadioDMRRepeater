@@ -10,10 +10,10 @@ Si4463 Module: <a href="https://www.aliexpress.com/item/433MHz-SI4463-Wireless-T
 <h2>Progress</h2></p>
 
 <p><h3>9. December 2017: </h3> </p>
-Started writing some more code just for using one module to test the code a bit.</p>
+<p>Started writing some more code just for using one module to test the code a bit.</p>
 Did hookup one module to Raspberry Pi 3:</p>
-![Alt text](IMG_20171209_135748.jpg?raw=true "module hookup")
 
+<img src="IMG_20171209_135748.jpg" alt="module hookup">
 <p><h3>18. December 2017: </h3> </p>
 
 Managed to get SPI communication up and running with one Si4463 RF IC.</p>

@@ -467,6 +467,8 @@ uint8_t Si446x_readGPIO(void);
 */
 uint8_t Si446x_dump(void* buff, uint8_t group);
 
+
+void activateTX();
 /**
 * @brief If interrupts are disabled (::SI446X_INTERRUPTS in Si446x_config.h) then this function should be called as often as possible to process any events
 *

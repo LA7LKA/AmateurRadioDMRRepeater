@@ -52,7 +52,7 @@ static uint8_t getResponse(void* buff, uint8_t len)
 {
 	uint8_t cts = 0;
 
-		printf("Waiting for CTS!\n\r");
+		//printf("Waiting for CTS!\n\r");
 		
 		
 		while(!cts)
@@ -78,7 +78,7 @@ static uint8_t getResponse(void* buff, uint8_t len)
 			bcm2835_gpio_write(SI446X_CSN, HIGH);
 		}
 
-		printf("CTS OK!\n\r");
+		//printf("CTS OK!\n\r");
 
 
 	return cts;
@@ -111,7 +111,7 @@ static void doAPI(void* data, uint8_t len, void* out, uint8_t outLen)
 	//{
 		if(waitForResponse(NULL, 0, 1)) // Make sure it's ok to send a command
 		{
-				printf("CS low, sending data to Si4463\n\r");
+				//printf("CS low, sending data to Si4463\n\r");
 				bcm2835_gpio_write(SI446X_CSN, LOW);
 				   
 				//CHIPSELECT()
@@ -363,8 +363,8 @@ void Si446x_init()
 
 	resetDevice();
 	applyStartupConfig();
-	interrupt(NULL);
-	Si446x_sleep();
+	//interrupt(NULL);
+	//Si446x_sleep();
 
 	//enabledInterrupts[IRQ_PACKET] = (1<<SI446X_PACKET_RX_PEND) | (1<<SI446X_CRC_ERROR_PEND);
 	//enabledInterrupts[IRQ_MODEM] = (1<<SI446X_SYNC_DETECT_PEND);
@@ -591,7 +591,7 @@ void Si446x_read(void* buff, uint8_t len)
 	//{
 		//CHIPSELECT()
 		//{
-			printf("Si446x_read\n\r");
+			//printf("Si446x_read\n\r");
 			
 			bcm2835_gpio_write(SI446X_CSN, LOW);
 			   
@@ -604,6 +604,26 @@ void Si446x_read(void* buff, uint8_t len)
 		//}
 	//}
 }
+
+void activateTX()
+{
+   
+    
+    uint8_t channel = 63;
+    uint8_t packet[] = { 0x31, channel,0,0, 0,0,0 };
+				bcm2835_gpio_write(SI446X_CSN, LOW);
+				   
+				//bcm2835_spi_transfer(SI446X_CMD_WRITE_TX_FIFO);
+
+				for(uint8_t i=0;i<7;i++)
+					bcm2835_spi_transfer(((uint8_t*)packet)[i]);
+
+			//}
+		//}
+				  
+				bcm2835_gpio_write(SI446X_CSN, HIGH);
+}
+
 /*
 // TODO maybe
 void Si446x_write(void* buff, uint8_t len)

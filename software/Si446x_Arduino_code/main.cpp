@@ -12,8 +12,10 @@ This is the main file for the project...
 
 #include "src/Si446x.h"
 
+#define DMR_LENGHT 33
 
-char data[128] = {0};
+uint8_t buffer[DMR_LENGHT];
+char data[DMR_LENGHT] = {0};
 si446x_info_t* ICinfo;
 int main(void)
 {
@@ -21,7 +23,9 @@ int main(void)
 	
 	// Start up
 	Si446x_init();
-	Si446x_setTxPower(SI446X_MAX_TX_POWER);
+	//Si446x_setTxPower(SI446X_MAX_TX_POWER);
+
+	//Si446x_setTxPower(0);
 
 
 	Si446x_getInfo(ICinfo);
@@ -29,7 +33,7 @@ int main(void)
 	//printf("IC info: %d %d %d %d %d %d\n\r", ICinfo -> chipRev, ICinfo->part, ICinfo->partBuild, ICinfo->id, ICinfo->customer, ICinfo->romId);
 	
 
-	for(int i=0; i < 128;i++)
+	for(int i=0; i < DMR_LENGHT;i++)
 	{
 		data[i] = rand() % 255;
 
@@ -38,13 +42,38 @@ int main(void)
 	
 	printf("\n\r");
 	
-	delay(5*1000); // wait 5 seconds
+	//delay(5*1000); // wait 5 seconds
+
+
+	Si446x_RX(63); //RX on 433,575 Mhz
+	while(1);
+
+/*
+	while(1)
+	{
+		
+		
+		if(Si446x_getRSSI() > -60)
+		{
+			printf("RSSI: %d\n\r", Si446x_getRSSI());
+			Si446x_read((uint8_t*)buffer, DMR_LENGHT);
+
+			for(int i=0; i < DMR_LENGHT;i++)
+				printf("%x",buffer[i]);
+
+			printf("\n\r");
+		}
+		
+	}
+
+*/
+
 
 	while(1)
 	{
 
-		Si446x_TX(data, sizeof(data), 40, SI446X_STATE_RX);
-		delay(500); //Wait for 500ms
+		Si446x_TX(data, sizeof(data), 63, SI446X_STATE_RX); //TX on 433,575 Mhz => ch 63
+		delay(20); //Wait for 500ms
 
 	}
 

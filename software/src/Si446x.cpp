@@ -201,7 +201,7 @@ static uint8_t getFRR(uint8_t reg)
 	uint8_t frr = 0;
 	//SI446X_ATOMIC()
 	//{
-		printf("getFRR\n\r");
+		//printf("getFRR\n\r");
 		bcm2835_gpio_write(SI446X_CSN, LOW);
 		   
 		//{

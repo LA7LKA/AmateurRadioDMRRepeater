@@ -44,10 +44,10 @@ int main(void)
 	
 	//delay(5*1000); // wait 5 seconds
 
-
+/*
 	Si446x_RX(63); //RX on 433,575 Mhz
 	while(1);
-
+*/
 /*
 	while(1)
 	{
@@ -73,7 +73,7 @@ int main(void)
 	{
 
 		Si446x_TX(data, sizeof(data), 63, SI446X_STATE_RX); //TX on 433,575 Mhz => ch 63
-		delay(20); //Wait for 500ms
+		delay(64); //Wait for 500ms
 
 	}
 

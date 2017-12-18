@@ -32,32 +32,32 @@ Managed to get SPI communication up and running with one Si4463 RF IC.</p>
    <td>18, GPIO24</td>
   </tr>
    <tr>
-    <td>1, GND</td>
-    <td>6, GND</td>
+    <td>5, nSEL</td>
+    <td>16, GPIO23</td>
 
   </tr>
   <tr>
-   <td>2, SDN</td>
-   <td>18, GPIO24</td>
+   <td>6, MOSI</td>
+   <td>19, MOSI</td>
   </tr> 
   
-    <tr>
-    <td>1, GND</td>
-    <td>6, GND</td>
+  <tr>
+    <td>7, MISO</td>
+    <td>21, MISO</td>
 
   </tr>
   <tr>
-   <td>2, SDN</td>
-   <td>18, GPIO24</td>
+   <td>8, SCK</td>
+   <td>23, SCK</td>
   </tr>
    <tr>
-    <td>1, GND</td>
-    <td>6, GND</td>
+    <td>9, IRQ</td>
+    <td>13, GPIO27</td>
 
   </tr>
   <tr>
-   <td>2, SDN</td>
-   <td>18, GPIO24</td>
+    <td>12, VCC => +3,3VDC</td>
+   <td>1, +3,3VDC</td>
   </tr> 
 </table>
 

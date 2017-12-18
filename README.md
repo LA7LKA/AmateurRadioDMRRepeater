@@ -31,6 +31,34 @@ Managed to get SPI communication up and running with one Si4463 RF IC.</p>
    <td>2, SDN</td>
    <td>18, GPIO24</td>
   </tr>
+   <tr>
+    <td>1, GND</td>
+    <td>6, GND</td>
+
+  </tr>
+  <tr>
+   <td>2, SDN</td>
+   <td>18, GPIO24</td>
+  </tr> 
+  
+    <tr>
+    <td>1, GND</td>
+    <td>6, GND</td>
+
+  </tr>
+  <tr>
+   <td>2, SDN</td>
+   <td>18, GPIO24</td>
+  </tr>
+   <tr>
+    <td>1, GND</td>
+    <td>6, GND</td>
+
+  </tr>
+  <tr>
+   <td>2, SDN</td>
+   <td>18, GPIO24</td>
+  </tr> 
 </table>
 
 73&88 de LA7LKA

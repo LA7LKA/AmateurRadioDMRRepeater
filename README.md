@@ -29,7 +29,7 @@ Managed to get SPI communication up and running with one Si4463 RF IC.</p>
     <td>1, +3,3VDC</td>
   </tr>
   <tr>
-    <th>Si4463 module/th>
+    <th>Si4463 module</th>
     <td>1, GND</td>
     <td>2, SDN</td>
     <td>5, nSEL</td>
